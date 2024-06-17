@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <div className="py-[100px]">
       <h1 className="text-[65px] font-semibold text-[#fff] text-left space-x-3 pl-5">
-        Hello, I'm Azar
+        Hello, I&apos;m Azar
       </h1>
 
       <div className="flex items-center justify-center">
