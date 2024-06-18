@@ -6,23 +6,28 @@ export default function Header(props: any) {
     {
       isButton: false,
       title: "Home",
+      action: "home",
     },
     {
       isButton: false,
       title: "About",
+      action: "about",
     },
     {
       isButton: false,
       title: "Skills",
+      action: "skills",
     },
     {
       isButton: false,
       title: "Projects",
+      action: "projects",
     },
 
     {
       isButton: true,
       title: "Contact me",
+      action: "contact",
     },
   ];
   console.log(props.viewSection);
@@ -43,10 +48,10 @@ export default function Header(props: any) {
           >
             {item.isButton ? (
               <div className="bg-[#370855] rounded-full py-1.5  px-4 ">
-                Contact me
+                <a href="#about"> Contact me</a>
               </div>
             ) : (
-              item.title
+              <a href={item.action}> item.title</a>
             )}
           </div>
         ))}

@@ -2,6 +2,7 @@
 import AboutUs from "@/components/AboutUs";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import Skills from "@/components/Skills";
 import Image from "next/image";
 import { SetStateAction, useState } from "react";
 
@@ -25,6 +26,7 @@ export default function Home() {
 
       <HeroSection />
       <AboutUs />
+      {/* <Skills /> */}
     </main>
   );
 }

@@ -10,7 +10,7 @@ export default function HeroSection() {
       <div className="flex items-center justify-center">
         <div className="border-b-2 border-[#fff]">azaruddin1307@gmail.com</div>
         <img
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDR8H0rgV-zmSodkT_erGjzA_VhfWE22Pg7Q&s"
+          src="/images/myImg.jpeg"
           className="rounded-full object-cover h-[170px] mx-10"
           alt=""
           width="170"
