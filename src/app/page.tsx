@@ -18,6 +18,9 @@ export default function Home() {
         height: "100vh",
         overflowY: "auto",
         width: "100%",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
       className=" bg-[url('/images/bg.svg')] py-10"
     >
