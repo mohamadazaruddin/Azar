@@ -28,6 +28,7 @@ export default function Projects() {
         {projects.map(({}, i) => {
           return (
             <div
+              key={i}
               className={`flex justify-center mb-[150px] even:dir-rtl ${
                 i % 2 === 0 ? "" : "projectDirRtL"
               }`}
