@@ -33,3 +33,21 @@ body {
     text-wrap: balance;
   }
 }
+
+.projectBag{
+ /* background: radial-gradient(90.16% 143.01% at 15.32% 21.04%, rgba(105, 59, 147, 0.2) 0%, rgba(110, 191, 244, 0.0447917) 77.08%, rgba(70, 144, 213, 0) 100%) warning: gradient uses a rotation that is not supported by CSS and may not behave as expected; */
+  /* From https://css.glass */
+background: rgba(59, 94, 168, 0.18);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.7px);
+-webkit-backdrop-filter: blur(2.7px);
+border: 1px solid rgba(59, 94, 168, 0.01);
+}
+
+.projectDir{
+  direction: ltr;
+}
+.projectDirRtL{
+  direction:rtl;
+}
