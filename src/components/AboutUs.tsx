@@ -2,6 +2,7 @@ import React from "react";
 import { Vortex } from "./ui/vortex";
 import { ContainerScroll } from "./ui/container-scroll-animation";
 import Arrow from "./Icons/Arrow";
+import { CardContainer } from "./ui/3d-card";
 
 export default function AboutUs() {
   return (
@@ -30,7 +31,7 @@ export default function AboutUs() {
             alt=""
           />
         </div>
-        <div className="w-[50%] pt-[100px] ml-10 relative">
+        <div className="w-[50%] pt-[100px] ml-10 relative ">
           <div className="absolute top-0 right-[-100px]">
             <Arrow height="100px" width="340px" color="#D117B8" />
           </div>

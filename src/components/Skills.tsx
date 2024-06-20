@@ -107,7 +107,7 @@ export default function Skills() {
           {stacksDetails.map((item, i) => (
             <div
               key={i}
-              className="flex justify-center items-center"
+              className="flex justify-center items-center "
               style={{
                 width: `${item.width + 20}px`,
                 height: `${item.height + 20}px`,

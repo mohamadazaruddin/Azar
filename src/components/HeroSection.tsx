@@ -38,6 +38,7 @@ export default function HeroSection() {
           alt=""
           width="170"
         />
+
         <a
           href="https://www.linkedin.com/in/mohamad-azaruddin-b8b880269/"
           className=""
