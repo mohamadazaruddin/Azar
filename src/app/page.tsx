@@ -1,5 +1,6 @@
 "use client";
 import AboutUs from "@/components/AboutUs";
+import ContactForm from "@/components/Contact";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import Projects from "@/components/Projects";
@@ -39,6 +40,7 @@ export default function Home() {
       <Skills />
 
       <Projects />
+      <ContactForm />
     </main>
   );
 }

@@ -40,7 +40,7 @@ export default function Header(props: any) {
           {navItems.map((item, i) => (
             <div
               key={i}
-              className={`py-2 cursor-pointer border-b-2  transition linear  ${
+              className={`py-2 cursor-pointer border-b-2 hover-underline-animation  transition linear  ${
                 !item.isButton && item.title === props.viewSection
                   ? "  border-[#D117B8]"
                   : "border-transparent"

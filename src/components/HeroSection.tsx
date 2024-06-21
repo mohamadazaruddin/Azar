@@ -2,6 +2,7 @@ import React from "react";
 import { TypewriterEffect } from "./ui/typewriter-effect";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
 import LinkedIn from "./Icons/LinkedIn";
+import { ReactTyped } from "react-typed";
 
 export default function HeroSection() {
   const words = [
@@ -48,9 +49,18 @@ export default function HeroSection() {
       </div>
       <div className="flex justify-end ">
         <h1 className="text-[65px] font-semibold text-[#fff] text-right space-x-3 pr-5 mt-8">
-          <TextGenerateEffect
+          {/* <TextGenerateEffect
             words={"Full Stack Developer"}
             className="text-[65px]"
+          /> */}
+          <ReactTyped
+            style={{
+              fontSize: "65px",
+              fontWeight: "bold",
+            }}
+            strings={["Full Stack Developer", "UI/UX Designer"]}
+            typeSpeed={100}
+            loop
           />
         </h1>
       </div>
