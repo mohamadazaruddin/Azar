@@ -41,7 +41,7 @@ export default function Projects() {
                   Example Project
                 </div>
                 <div
-                  className={`projectBag p-4 rounded-xl absolute w-[650px] ${
+                  className={`bg-background/10 backdrop-blur backdrop-saturate-150  before:bg-white/10 border-white/20 border-1 p-4 rounded-xl absolute w-[650px] ${
                     i % 2 === 0 ? "text-start" : "text-end"
                   }`}
                 >
