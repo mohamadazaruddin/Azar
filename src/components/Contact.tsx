@@ -120,7 +120,7 @@ export default function ContactForm() {
           <div className="text-center">
             <button
               type="submit"
-              className="py-3 px-12 bg-[#D117B8] text-white rounded-md"
+              className="bg-[#D117B8] rounded-full py-2 px-6 text-[18px] w-auto mt-10 hover:translate-x-[10px] ease-out duration-300"
             >
               Submit
             </button>
