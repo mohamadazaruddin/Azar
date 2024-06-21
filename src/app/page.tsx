@@ -7,7 +7,7 @@ import Skills from "@/components/Skills";
 import { FollowerPointerCard } from "@/components/ui/following-pointer";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import Image from "next/image";
-import { SetStateAction, useState } from "react";
+import { SetStateAction, useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [viewSection, setviewSection] = useState("Home");
@@ -35,7 +35,9 @@ export default function Home() {
       <HeroSection />
       {/* </FollowerPointerCard> */}
       <AboutUs />
+
       <Skills />
+
       <Projects />
     </main>
   );

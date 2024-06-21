@@ -33,7 +33,7 @@ export default function Header(props: any) {
   return (
     <div className="px-20">
       <div
-        className={`flex justify-between w-full px-4	bg-black bg-opacity-60 shadow-lg rounded-full border border-opacity-50 border-[#100896] backdrop-filter  	`}
+        className={`flex justify-between w-full px-4	bg-black bg-opacity-60 shadow-lg rounded-full border border-opacity-50 border-[#100896] backdrop-filter hover:scale-[1.05] ease-out duration-300	`}
       >
         <img src="/images/logo.svg" alt="" height="40" width="40" />
         <div className="flex justify-between items-center gap-10  text-[14px]">

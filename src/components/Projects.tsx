@@ -1,20 +1,25 @@
 import React from "react";
 import { CardContainer } from "./ui/3d-card";
+import { PinContainer } from "./ui/3d-pin";
 
 export default function Projects() {
   const projects = [
     {
       title: "EMS",
+      href: "https://ems-ivory.vercel.app",
+      image: "/images/taskblitz-poster.png",
       detail:
         "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     },
     {
       title: "Portfolio",
+      image: "/images/taskblitz-poster.png",
       detail:
         "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     },
     {
       title: "nn",
+      image: "/images/taskblitz-poster.png",
       detail:
         "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     },
@@ -25,11 +30,11 @@ export default function Projects() {
         My projects
       </h1>
       <div className="mt-24">
-        {projects.map(({}, i) => {
+        {projects.map(({ title, href, detail, image }, i) => {
           return (
             <div
               key={i}
-              className={`flex justify-center mb-[150px] even:dir-rtl ${
+              className={`flex justify-center mb-[150px]  even:dir-rtl ${
                 i % 2 === 0 ? "" : "projectDirRtL"
               }`}
             >
@@ -41,7 +46,7 @@ export default function Projects() {
                   Example Project
                 </div>
                 <div
-                  className={`projectBag p-4 rounded-xl absolute w-[650px] ${
+                  className={`bg-background/10 backdrop-blur  z-[999] backdrop-saturate-150  before:bg-white/10 border-white/20 border-1 p-4 rounded-xl absolute w-[650px] ${
                     i % 2 === 0 ? "text-start" : "text-end"
                   }`}
                 >
@@ -53,9 +58,13 @@ export default function Projects() {
                 </div>
               </div>
               {/* <CardContainer> */}
-              <div className="h-[300px] w-[500px] bg-white border-t-[40px] border-l-[40px] ">
-                <div className="rounded-t-[14px]"></div>
-              </div>
+              <PinContainer title={title} href={href}>
+                <div
+                  className={`h-[300px] w-[500px] bg-[url('/images/taskblitz-poster.png')] bg-no-repeat	bg-center	bg-cover `}
+                >
+                  <div className="rounded-t-[14px]"></div>
+                </div>
+              </PinContainer>
               {/* </CardContainer> */}
             </div>
           );

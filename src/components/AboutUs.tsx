@@ -43,7 +43,7 @@ export default function AboutUs() {
             gap between design and development to deliver products that not only
             look amazing but also function flawlessly.
           </div>
-          <button className="bg-[#D117B8] rounded-full py-2 px-6 text-[18px] w-auto mt-10">
+          <button className="bg-[#D117B8] rounded-full py-2 px-6 text-[18px] w-auto mt-10 hover:translate-x-[10px] ease-out duration-300">
             Contact me
           </button>
         </div>

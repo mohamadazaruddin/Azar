@@ -28,7 +28,7 @@ export default function HeroSection() {
       <div className="flex items-center justify-center mt-5">
         <a
           href="mailto:azaruddin1307@gmail.com"
-          className="border-b-2 border-[#fff]"
+          className="border-b-2 border-[#fff] hover:translate-x-[-10px] ease-out duration-300"
         >
           azaruddin1307@gmail.com
         </a>
@@ -41,7 +41,7 @@ export default function HeroSection() {
 
         <a
           href="https://www.linkedin.com/in/mohamad-azaruddin-b8b880269/"
-          className=""
+          className="hover:translate-x-[10px] ease-out duration-300"
         >
           <LinkedIn width="28px" height="28px" color="#fff" />
         </a>
