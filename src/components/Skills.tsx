@@ -2,30 +2,12 @@ import React, { useEffect, useRef, useState } from "react";
 import { BackgroundBeams } from "./ui/background-beams";
 import { TypewriterEffect } from "./ui/typewriter-effect";
 import Arrow from "./Icons/Arrow";
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Skills() {
-  const [inViewport, setInViewport] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const skillsRef = useRef(null);
-  useEffect(() => {
-    const skillsObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setInViewport(true);
-        }
-      });
-    });
 
-    if (skillsRef.current) {
-      skillsObserver.observe(skillsRef.current);
-    }
-
-    return () => {
-      if (skillsRef.current) {
-        skillsObserver.unobserve(skillsRef.current);
-      }
-    };
-  }, []);
   const stacksDetails = [
     {
       img: "/images/stacks/ANGULAR.svg",
@@ -189,61 +171,40 @@ export default function Skills() {
       top: 360,
     },
   ];
-  // const words = [
-  //   {
-  //     text: "I",
-  //     className: "text-[40px]",
-  //   },
-  //   {
-  //     text: "Design,",
-  //     className: "text-blue-500 dark:text-blue-500 text-[40px] ",
-  //   },
-  //   // {
-  //   //   text: "I",
-  //   //   className: "text-[40px]",
-  //   // },
-  //   {
-  //     text: "Code,",
-  //     className: "text-blue-500 dark:text-blue-500 text-[40px] ",
-  //   },
-  //   // {
-  //   //   text: "I",
-  //   //   className: "text-[40px]",
-  //   // },
-  //   {
-  //     text: "Deploy,",
-  //     className: "text-blue-500 dark:text-blue-500 text-[40px] ",
-  //   },
-  //   // {
-  //   //   text: "I",
-  //   //   className: "text-[40px]",
-  //   // },
-  //   {
-  //     text: "Escape",
-  //     className: "text-blue-500 dark:text-blue-500 text-[40px] ",
-  //   },
-  // ];
   return (
     <div
       // ref={targetDivRef}
       className="relative py-[100px] px-20"
       id="skills"
     >
-      <h1 className="  text-[80px] font-semibold text-[#fff]  space-x-3 pl-5   leading-[80px]  ">
-        My skills
-      </h1>
-      <img
+      <Image
         src="/images/pinkDots.svg"
         alt=""
+        width={400}
+        height={480}
+        className="absolute  top-[680px] right-[100px] transform  -rotate-90 h-[480px] w-[400px]"
+      />
+      <Image
+        src="/images/blueDots.svg"
+        alt=""
+        className="absolute top-[450px] left-0 h-[380px] w-[450px]"
+        width={450}
+        height={380}
+      />
+      <h1 className="  text-[80px] font-semibold text-[#fff]  space-x-3 pl-20   leading-[80px]  ">
+        My skills
+      </h1>
+
+      <Image
+        src="/images/pinkDots.svg"
+        alt=""
+        width={400}
+        height={380}
         className="absolute  top-[-200px] left-[40%] transform -translate-x-[200px] -rotate-90 h-[380px] w-[400px]"
       />
       <div className="absolute right-[100px] rotate-180 top-24">
         <Arrow height="100px" width="340px" color="#D117B8" />
       </div>
-      {/* <TypewriterEffect words={words} className="text-[40px]" /> */}
-      {/* <div className="absolute px-4	bg-black bg-opacity-60 shadow-lg rounded-full border border-opacity-50 border-black backdrop-filter ">
-        I design, Code, Deploy and Escape before the bugs find me !!
-      </div> */}
 
       <div
         className={`flex  justify-center relative antialiased mt-24 w-[900px] mx-auto h-[600px] `}
@@ -254,31 +215,28 @@ export default function Skills() {
           setIsHovered(false);
         }}
       >
-        <div ref={skillsRef} className="absolute top-[500px]"></div>
-        {/* <div className="grid grid-cols-8 gap-10	"> */}
         {stacksDetails.map((item, i) => (
-          <img
-            className={`ease-in duration-200 ${
+          <Image
+            key={i}
+            alt="stacks"
+            className={`ease-in duration-100 ${
               isHovered
                 ? "even:translate-x-[10px] odd:translate-x-[-10px]"
                 : "even:translate-x-0 odd:translate-x-0"
             }`}
-            key={i}
             src={item.img}
+            width={item.width}
+            height={item.width}
             style={{
               width: `${item.width}px`,
               height: `${item.height}px `,
               position: "absolute",
-              top: `${inViewport ? item.top - 50 : item.top}px`,
+              top: `${item.top}px`,
               left: `${item.left}px`,
             }}
           />
-          // </div>
         ))}
       </div>
-
-      {/* </div>{" "} */}
-      {/* <BackgroundBeams /> */}
     </div>
   );
 }
