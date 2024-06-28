@@ -30,44 +30,75 @@ export default function Follow() {
     },
   ];
   return (
-    <div
-      // ref={targetDivRef}
-      className="relative py-[100px] px-20"
-    >
-      <Image
-        src="/images/dotLines.svg"
-        alt=""
-        width={200}
-        height={200}
-        className="absolute  top-[200px] left-[165px]    h-[150px] w-[300px]"
-      />
-      <div className="absolute left-[80px] top-[-60px] rotate-12	">
-        <CrossOutline height="50px" width="50px" color="#D117B8" />
-      </div>
-      <div className="flex justify-between items-center">
-        <div>
-          <h1 className="text-[80px] font-semibold text-[#fff]  space-x-3 pl-20   leading-[80px]  ">
-            Follow me
-          </h1>
+    <>
+      <div className="hidden md:block">
+        <div
+          // ref={targetDivRef}
+          className="relative py-[100px] px-20"
+        >
+          <Image
+            src="/images/dotLines.svg"
+            alt=""
+            width={200}
+            height={200}
+            className="absolute  top-[200px] left-[165px]    h-[150px] w-[300px]"
+          />
+          <div className="absolute left-[80px] top-[-60px] rotate-12	">
+            <CrossOutline height="50px" width="50px" color="#D117B8" />
+          </div>
+          <div className="flex justify-between items-center">
+            <div>
+              <h1 className="text-[80px] font-semibold text-[#fff]  space-x-3 pl-20   leading-[80px]  ">
+                Follow me
+              </h1>
+            </div>
+            <div className="grid grid-cols-3 gap-10 mr-20">
+              {socialMedia.map((item, i) => (
+                <a href={`${item.href}`} target="_blank" key={i}>
+                  <Image
+                    alt="socials"
+                    className={`ease-in duration-100 hover:scale-[1.09]`}
+                    src={item.img}
+                    width={75}
+                    height={75}
+                    style={{
+                      width: `75px`,
+                      height: `75px `,
+                    }}
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className="grid grid-cols-3 gap-10 mr-20">
-          {socialMedia.map((item, i) => (
-            <a href={`${item.href}`} target="_blank" key={i}>
-              <Image
-                alt="socials"
-                className={`ease-in duration-100 hover:scale-[1.09]`}
-                src={item.img}
-                width={75}
-                height={75}
-                style={{
-                  width: `75px`,
-                  height: `75px `,
-                }}
-              />
-            </a>
-          ))}
+      </div>
+      <div className="block md:hidden px-5 relative">
+        {" "}
+        <div className="mt-10">
+          <div>
+            <h1 className="text-[40px] font-semibold text-[#fff] text-center ">
+              Follow me
+            </h1>
+          </div>
+          <div className="grid grid-cols-3 gap-4 mt-5">
+            {socialMedia.map((item, i) => (
+              <a href={`${item.href}`} target="_blank" key={i}>
+                <Image
+                  alt="socials"
+                  className={`ease-in duration-100 hover:scale-[1.09] m-auto`}
+                  src={item.img}
+                  width={50}
+                  height={50}
+                  style={{
+                    width: `50px`,
+                    height: `50px `,
+                  }}
+                />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
