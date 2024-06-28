@@ -88,7 +88,7 @@ export default function HeroSection() {
             </div>
             <div className="w-1/2 relative">
               <img src="/images/profileImg2.png" alt="" className="h-[450px]" />
-              <div className="absolute top-[0px] right-0">
+              <div className="absolute top-[100px] right-0">
                 {socialMedia.map((item, i) => (
                   <a href={`${item.href}`} target="_blank" key={i}>
                     <Image
