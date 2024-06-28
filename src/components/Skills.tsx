@@ -241,7 +241,7 @@ export default function Skills() {
           </div>
         </div>
       </div>
-      <div className="block md:hidden px-5 relative translate-y-[-100px]">
+      <div className="block md:hidden px-5 relative translate-y-[-50px]">
         <h1 className="  text-[36px] font-semibold text-[#fff]   ">
           My skills
         </h1>

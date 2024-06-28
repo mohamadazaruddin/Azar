@@ -66,10 +66,18 @@ export default function Header(props: any) {
         </div>
       </div>
 
-      <div className="block md:hidden">
+      <div className="block md:hidden relative">
         <div className="flex justify-between w-full px-4">
           <img src="/images/logo.svg" alt="" height="40" width="40" />
-          <MenuIcon height="34px" width="34px" color="#fff" />
+          <MenuIcon
+            height="34px"
+            width="34px"
+            color="#fff"
+            onClick={() => {
+              console.log("red");
+              props.setNavOpen(true);
+            }}
+          />
         </div>
       </div>
     </>

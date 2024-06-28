@@ -7,6 +7,8 @@ import Image from "next/image";
 import CrossSolid from "./Icons/CrossSolid";
 import CrossOutline from "./Icons/CrossOutline";
 import { useRouter } from "next/navigation";
+import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import Link from "next/link";
 
 export default function Projects({ isAll }: { isAll?: boolean }) {
   const projects = [
@@ -30,12 +32,6 @@ export default function Projects({ isAll }: { isAll?: boolean }) {
       imageUrl: "/images/projects/moviesHub.svg",
       detail:
         "A web app named Movies Hub that allows users to search for movies, watch trailers, and view ratings of each movie. The app also provides additional information like cast, directors, plot summaries, and user reviews to help users make informed decisions on what to watch. ",
-    },
-    {
-      title: "yyyy",
-      imageUrl: "/images/taskblitz-poster.png",
-      detail:
-        "A web app for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended tracks based on your existing playlists and more.",
     },
   ];
   const [projectData, setProjectData] = useState(projects);
@@ -134,14 +130,65 @@ export default function Projects({ isAll }: { isAll?: boolean }) {
                 onClick={() => push("/projects")}
                 className="bg-[#d117b8] rounded-full py-1 px-6 text-[16px] w-auto mt-10 hover:translate-x-[10px] ease-out duration-100 flex items-center gap-4 mx-auto "
               >
-                See More Projects{" "}
+                View All
                 <Arrow height="30px" width="24px" color="#fff" />
               </button>
             </div>
           )}
         </div>
       </div>
-      <div className="block md:hidden">mob herosection</div>
+      <div className="block md:hidden px-5 mt-10 relative">
+        <h1 className={`text-[40px] font-semibold text-[#fff] text-right`}>
+          My projects
+        </h1>
+        {projects.map((item, i) => (
+          <CardContainer className="inter-var py-0 mt-5" key={i}>
+            <CardBody className="bg-black-50 relative group/card   dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 border  ">
+              <CardItem translateZ="100" className="w-full ">
+                <Image
+                  src={`${item.imageUrl}`}
+                  height="250"
+                  width="25"
+                  className="h-[150px] w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                  alt="thumbnail"
+                />
+              </CardItem>
+              <CardItem
+                translateZ="50"
+                className="text-md font-bold text-neutral-600 dark:text-white mt-5"
+              >
+                {item.title}
+              </CardItem>
+              <CardItem
+                as="p"
+                translateZ="60"
+                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+              >
+                {item.detail}
+              </CardItem>
+
+              <div className="flex justify-between items-center mt-5">
+                <CardItem
+                  translateZ={20}
+                  as={Link}
+                  href={`${item.href}`}
+                  target="__blank"
+                  className=" py-2 rounded-xl text-sm font-normal  text-blue-500"
+                >
+                  Visit now
+                </CardItem>
+              </div>
+            </CardBody>
+          </CardContainer>
+        ))}
+        <button
+          type="button"
+          onClick={() => push("/projects")}
+          className="bg-[#d117b8] rounded-full py-1 px-6 text-[16px] w-auto mt-6 hover:translate-x-[10px] ease-out duration-100 flex items-center gap-4 mx-auto "
+        >
+          View All <Arrow height="30px" width="24px" color="#fff" />
+        </button>
+      </div>
     </>
   );
 }

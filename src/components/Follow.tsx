@@ -72,7 +72,33 @@ export default function Follow() {
           </div>
         </div>
       </div>
-      <div className="block md:hidden">mob skill section</div>
+      <div className="block md:hidden px-5 relative">
+        {" "}
+        <div className="mt-10">
+          <div>
+            <h1 className="text-[40px] font-semibold text-[#fff] text-center ">
+              Follow me
+            </h1>
+          </div>
+          <div className="grid grid-cols-3 gap-4 mt-5">
+            {socialMedia.map((item, i) => (
+              <a href={`${item.href}`} target="_blank" key={i}>
+                <Image
+                  alt="socials"
+                  className={`ease-in duration-100 hover:scale-[1.09] m-auto`}
+                  src={item.img}
+                  width={50}
+                  height={50}
+                  style={{
+                    width: `50px`,
+                    height: `50px `,
+                  }}
+                />
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   );
 }

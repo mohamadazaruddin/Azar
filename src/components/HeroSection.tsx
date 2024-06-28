@@ -88,7 +88,7 @@ export default function HeroSection() {
             </div>
             <div className="w-1/2 relative">
               <img src="/images/profileImg2.png" alt="" className="h-[450px]" />
-              <div className="absolute top-[100px] right-0">
+              <div className="absolute top-[0px] right-0">
                 {socialMedia.map((item, i) => (
                   <a href={`${item.href}`} target="_blank" key={i}>
                     <Image
@@ -110,7 +110,7 @@ export default function HeroSection() {
         </div>
       </div>
       <div className="block md:hidden">
-        <div className="mt-12 px-5">
+        <div className="mt-14 px-5 relative">
           <ReactTyped
             style={{
               fontSize: "18px",
@@ -131,19 +131,23 @@ export default function HeroSection() {
             FROM ANYWHERE
           </div>
           <div>
-            <img src="/images/profileImg.png" alt="" className="h-[550px]" />
-            <div className="absolute top-[0px] right-0">
+            <img
+              src="/images/profileImg2.png"
+              alt=""
+              className="h-[280px] mt-20"
+            />
+            <div className="absolute top-[100px] right-5">
               {socialMedia.map((item, i) => (
                 <a href={`${item.href}`} target="_blank" key={i}>
                   <Image
                     alt="socials"
                     className={`ease-in duration-100 hover:scale-[1.09]`}
                     src={item.img}
-                    width={28}
-                    height={28}
+                    width={32}
+                    height={32}
                     style={{
-                      width: `28px`,
-                      height: `28px `,
+                      width: `32px`,
+                      height: `32px `,
                     }}
                   />
                 </a>

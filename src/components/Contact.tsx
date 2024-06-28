@@ -152,7 +152,81 @@ export default function ContactForm() {
           </div>
         </div>
       </div>
-      <div className="block md:hidden">mob herosection</div>
+      <div className="block md:hidden px-5 mt-10">
+        <h1 className="text-[40px] font-semibold text-[#fff] text-center ">
+          Contact Me
+        </h1>
+        <div className="w-[100%] m-auto mt-[30px]">
+          <form onSubmit={handleSubmit} ref={form} className="space-y-4">
+            <div className="mb-4">
+              <label
+                htmlFor="name"
+                className="block text-sm font-medium text-[#fff] ps-2"
+              >
+                Full Name:
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                value={formData.name}
+                placeholder="Enter name here..."
+                onChange={handleChange}
+                required
+                className="mt-1 p-2 block w-full h-[50px] text-[#fff] rounded-md bg-[#2d0b37] focus:border-none outline-none"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="email"
+                className="block text-sm font-medium text-[#fff] ps-2"
+              >
+                Email:
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                value={formData.email}
+                placeholder="Enter email here..."
+                onChange={handleChange}
+                required
+                className="mt-1 p-2 block w-full h-[50px] text-[#fff] rounded-md bg-[#2d0b37] focus:border-none outline-none"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="message"
+                className="block text-sm font-medium text-[#fff] ps-2"
+              >
+                Message:
+              </label>
+              <textarea
+                style={{
+                  resize: "none",
+                }}
+                name="message"
+                rows={8}
+                cols={50}
+                id="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Enter message here..."
+                required
+                className="mt-1 p-2 block w-full h-[150px] text-[#fff] rounded-md bg-[#2d0b37] focus:border-none outline-none"
+              />
+            </div>
+            <div className="text-center">
+              <button
+                type="submit"
+                className="bg-[#D117B8] rounded-full py-1 px-10 text-[16px] w-auto mt-5 hover:translate-x-[10px] ease-out duration-100"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </>
   );
 }
