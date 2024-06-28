@@ -94,7 +94,7 @@ export default function Skills() {
       top: 25,
     },
     {
-      img: "/images/stacks/MONGODB.svg",
+      img: "/images/stacks/MONGO_DB.svg",
       height: 90,
       width: 90,
       left: 875,
