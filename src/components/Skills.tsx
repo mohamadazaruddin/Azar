@@ -241,7 +241,15 @@ export default function Skills() {
           </div>
         </div>
       </div>
-      <div className="block md:hidden">mob skill section</div>
+      <div className="block md:hidden px-5 relative translate-y-[-100px]">
+        <h1 className="  text-[36px] font-semibold text-[#fff]   ">
+          My skills
+        </h1>
+        <div className="absolute right-[20px] rotate-180 top-0">
+          <Arrow height="40px" width="80px" color="#D117B8" />
+        </div>
+        <img src="/images/skills.png" alt="" className="w-full mt-10" />
+      </div>
     </>
   );
 }

@@ -46,6 +46,20 @@ export default function HeroSection() {
       className: "text-blue-500 dark:text-blue-500 text-[65px] ",
     },
   ];
+  const mobWords = [
+    {
+      text: "Hello,",
+      className: "text-[32px]",
+    },
+    {
+      text: "I'm",
+      className: "text-[32px]",
+    },
+    {
+      text: "Azar",
+      className: "text-blue-500 dark:text-blue-500 text-[32px] ",
+    },
+  ];
   return (
     <>
       <div className="hidden md:block">
@@ -92,55 +106,52 @@ export default function HeroSection() {
                 ))}
               </div>
             </div>
-            {/* <h1 className="text-[65px] font-semibold text-[#fff]  space-x-3 pl-5"> */}
-            {/* <TypewriterEffect words={words} className="text-[65px]" /> */}
-            {/* <TextGenerateEffect
-              words={`Hello I'm Azar`}
-              className="text-[65px]"
-            /> */}
-            {/* </h1> */}
           </div>
-          {/* <div className="flex items-center justify-center mt-5">
-            <a
-              href="mailto:azaruddin1307@gmail.com"
-              className="border-b-2 border-[#fff] hover:translate-x-[-10px] ease-out duration-100"
-            >
-              azaruddin1307@gmail.com
-            </a>
-            <img
-              src="/images/myImg.jpeg"
-              className="rounded-full object-cover h-[170px] mx-10 hover:translate-y-[-10px] ease-out duration-100"
-              alt=""
-              width="170"
-            />
-
-            <a
-              href="https://www.linkedin.com/in/mohamad-azaruddin-b8b880269/"
-              className="hover:translate-x-[10px] ease-out duration-100"
-            >
-              <LinkedIn width="28px" height="28px" color="#fff" />
-            </a>
-          </div>
-          <div className="flex justify-end ">
-            <h1 className="text-[65px] font-semibold text-[#fff] text-right space-x-3 pr-5 mt-8"> */}
-          {/* <TextGenerateEffect
-            words={"Full Stack Developer"}
-            className="text-[65px]"
-          /> */}
-          {/* <ReactTyped
-                style={{
-                  fontSize: "65px",
-                  fontWeight: "bold",
-                }}
-                strings={["Full Stack Developer", "UI/UX Designer"]}
-                typeSpeed={100}
-                loop
-              />
-            </h1> */}
-          {/* </div> */}
         </div>
       </div>
-      <div className="block md:hidden">mob herosection</div>
+      <div className="block md:hidden">
+        <div className="mt-12 px-5">
+          <ReactTyped
+            style={{
+              fontSize: "18px",
+              fontWeight: "regular",
+              color: "#9B9A9A",
+            }}
+            strings={["Full Stack Developer", "UI/UX Designer"]}
+            typeSpeed={100}
+            loop
+          />
+          <TypewriterEffect
+            words={mobWords}
+            className="text-[32px] mt-1 text-start"
+          />
+
+          <div className="border-l border-[#9B9A9A] text-[#9B9A9A] text-xs w-[300px] pl-2 mt-[40px]">
+            i’M A UX DESIGNER AND A FULL STACK DEVELOPER. AND I WORK REMOTELY
+            FROM ANYWHERE
+          </div>
+          <div>
+            <img src="/images/profileImg.png" alt="" className="h-[550px]" />
+            <div className="absolute top-[0px] right-0">
+              {socialMedia.map((item, i) => (
+                <a href={`${item.href}`} target="_blank" key={i}>
+                  <Image
+                    alt="socials"
+                    className={`ease-in duration-100 hover:scale-[1.09]`}
+                    src={item.img}
+                    width={28}
+                    height={28}
+                    style={{
+                      width: `28px`,
+                      height: `28px `,
+                    }}
+                  />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 }
