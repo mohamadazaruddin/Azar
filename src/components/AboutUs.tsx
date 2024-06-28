@@ -32,7 +32,7 @@ export default function AboutUs() {
               </h1>
 
               <Image
-                src="/images/myImg.jpeg"
+                src="/images/myImg.png"
                 className="rounded-full object-cover h-[400px] w-[400px] mx-10"
                 alt=""
                 height={400}
