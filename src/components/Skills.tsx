@@ -172,71 +172,76 @@ export default function Skills() {
     },
   ];
   return (
-    <div
-      // ref={targetDivRef}
-      className="relative py-[100px] px-20"
-      id="skills"
-    >
-      <Image
-        src="/images/pinkDots.svg"
-        alt=""
-        width={400}
-        height={480}
-        className="absolute  top-[680px] right-[100px] transform  -rotate-90 h-[480px] w-[400px]"
-      />
-      <Image
-        src="/images/blueDots.svg"
-        alt=""
-        className="absolute top-[450px] left-0 h-[380px] w-[450px]"
-        width={450}
-        height={380}
-      />
-      <h1 className="  text-[80px] font-semibold text-[#fff]  space-x-3 pl-20   leading-[80px]  ">
-        My skills
-      </h1>
-
-      <Image
-        src="/images/pinkDots.svg"
-        alt=""
-        width={400}
-        height={380}
-        className="absolute  top-[-200px] left-[40%] transform -translate-x-[200px] -rotate-90 h-[380px] w-[400px]"
-      />
-      <div className="absolute right-[100px] rotate-180 top-24">
-        <Arrow height="100px" width="340px" color="#D117B8" />
-      </div>
-
-      <div
-        className={`flex  justify-center relative antialiased mt-24 w-[900px] mx-auto h-[600px] `}
-        onMouseEnter={() => {
-          setIsHovered(true);
-        }}
-        onMouseLeave={() => {
-          setIsHovered(false);
-        }}
-      >
-        {stacksDetails.map((item, i) => (
+    <>
+      <div className="hidden md:block">
+        <div
+          // ref={targetDivRef}
+          className="relative py-[100px] px-20"
+          id="skills"
+        >
           <Image
-            key={i}
-            alt="stacks"
-            className={`ease-in duration-100 ${
-              isHovered
-                ? "even:translate-x-[10px] odd:translate-x-[-10px]"
-                : "even:translate-x-0 odd:translate-x-0"
-            }`}
-            src={item.img}
-            width={item.width}
-            height={item.width}
-            style={{
-              width: `${item.width}px`,
-              height: `${item.height}px `,
-              position: "absolute",
-              top: `${item.top}px`,
-              left: `${item.left}px`,
-            }}
+            src="/images/pinkDots.svg"
+            alt=""
+            width={400}
+            height={480}
+            className="absolute  top-[680px] right-[100px] transform  -rotate-90 h-[480px] w-[400px]"
           />
-        ))}
+          <Image
+            src="/images/blueDots.svg"
+            alt=""
+            className="absolute top-[450px] left-0 h-[380px] w-[450px]"
+            width={450}
+            height={380}
+          />
+          <h1 className="  text-[80px] font-semibold text-[#fff]  space-x-3 pl-20   leading-[80px]  ">
+            My skills
+          </h1>
+
+          <Image
+            src="/images/pinkDots.svg"
+            alt=""
+            width={400}
+            height={380}
+            className="absolute  top-[-200px] left-[40%] transform -translate-x-[200px] -rotate-90 h-[380px] w-[400px]"
+          />
+          <div className="absolute right-[100px] rotate-180 top-24">
+            <Arrow height="100px" width="340px" color="#D117B8" />
+          </div>
+
+          <div
+            className={`flex  justify-center relative antialiased mt-24 w-[900px] mx-auto h-[600px] `}
+            onMouseEnter={() => {
+              setIsHovered(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovered(false);
+            }}
+          >
+            {stacksDetails.map((item, i) => (
+              <Image
+                key={i}
+                alt="stacks"
+                className={`ease-in duration-100 ${
+                  isHovered
+                    ? "even:translate-x-[10px] odd:translate-x-[-10px]"
+                    : "even:translate-x-0 odd:translate-x-0"
+                }`}
+                src={item.img}
+                width={item.width}
+                height={item.width}
+                style={{
+                  width: `${item.width}px`,
+                  height: `${item.height}px `,
+                  position: "absolute",
+                  top: `${item.top}px`,
+                  left: `${item.left}px`,
+                }}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+      <div className="block md:hidden">mob skill section</div>
+    </>
   );
 }

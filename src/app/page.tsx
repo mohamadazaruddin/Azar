@@ -26,7 +26,7 @@ export default function Home() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className=" bg-[url('/images/bg.svg')] py-10"
+      className="bg-[url('/images/mobBG.svg')] md:bg-[url('/images/bg.svg')]  py-10"
     >
       <Header
         setviewSection={(section: SetStateAction<string>) =>

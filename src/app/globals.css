@@ -103,21 +103,19 @@ body {
 
 ::-webkit-scrollbar {
   width: 3px;
+    background:transparent;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   /* box-shadow: inset 0 0 5px grey;  */
+  background:transparent;
   border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #5e17d1;
+  /* background: #5e17d1; */
   border-radius: 10px;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #5e17d1;
-}
