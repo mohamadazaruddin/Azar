@@ -4,7 +4,6 @@ import { Contact } from "../../../services/model/contact";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest) {
-  console.log("innn");
   const payload = await req.json();
   await mongoose.connect(connectionStr);
   let comment = new Contact(payload);
