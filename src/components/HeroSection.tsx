@@ -32,7 +32,7 @@ export default function HeroSection() {
   ];
   const words = [
     {
-      text: "Hello,",
+      text: "Hey,",
       className: "text-[65px]",
     },
     {
@@ -46,7 +46,7 @@ export default function HeroSection() {
   ];
   const mobWords = [
     {
-      text: "Hello,",
+      text: "Hey,",
       className: "text-[32px]",
     },
     {
@@ -84,7 +84,7 @@ export default function HeroSection() {
                 REMOTELY FROM ANYWHERE
               </div>
             </div>
-            <div className="w-1/2 relative">
+            <div className="w-1/2 relative flex justify-start">
               <img
                 src="/images/profileImg2.png"
                 alt=""
@@ -95,7 +95,7 @@ export default function HeroSection() {
                   <a href={`${item.href}`} target="_blank" key={i}>
                     <Image
                       alt="socials"
-                      className={`ease-in duration-100 hover:scale-[1.09]`}
+                      className={`ease-in duration-100 hover:scale-[1.09] mt-2`}
                       src={item.img}
                       width={50}
                       height={50}

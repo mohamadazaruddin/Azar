@@ -44,7 +44,9 @@ export default function Header(props: any) {
                 <div
                   key={i}
                   className={`py-2 cursor-pointer border-b-2 ${
-                    !item.isButton && "hover-underline-animation"
+                    !item.isButton &&
+                    item.title !== props.viewSection &&
+                    "hover-underline-animation"
                   }  transition linear  ${
                     !item.isButton && item.title === props.viewSection
                       ? "  border-[#D117B8]"

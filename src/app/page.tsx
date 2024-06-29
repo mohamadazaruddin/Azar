@@ -8,13 +8,25 @@ import HeroSection from "@/components/HeroSection";
 import CrossSolid from "@/components/Icons/CrossSolid";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-import { motion } from "framer-motion";
-import Image from "next/image";
 import { SetStateAction, useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [viewSection, setviewSection] = useState("Home");
   const [navOpen, setNavOpen] = useState(false);
+
+  useEffect(() => {
+    const fetchFoodoData = async () => {
+      const foodo = await fetch("https://foodo-be.onrender.com");
+      const data = await foodo.json();
+    };
+    const fetchEmsData = async () => {
+      const ems = await fetch("https://ems-be-eow5.onrender.com");
+      const emsData = await ems.json();
+    };
+    fetchEmsData();
+    fetchFoodoData();
+  }, []);
+
   const navItems = [
     {
       isButton: false,

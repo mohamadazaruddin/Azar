@@ -6,27 +6,32 @@ export default function Footer() {
       isButton: false,
       title: "Home",
       action: "home",
+      mobNav: "mobHome",
     },
     {
       isButton: false,
       title: "About",
       action: "about",
+      mobNav: "mobAbout",
     },
     {
       isButton: false,
       title: "Skills",
       action: "skills",
+      mobNav: "mobSkills",
     },
     {
       isButton: false,
       title: "Projects",
       action: "projects",
+      mobNav: "mobProjects",
     },
 
     {
       isButton: true,
       title: "Contact me",
       action: "contact",
+      mobNav: "mobContact",
     },
   ];
   return (
@@ -59,7 +64,7 @@ export default function Footer() {
             <a
               className="color-[#fff] text-sm  duration-100 hover:scale-[1.09]"
               key={i}
-              href={`#${item.action}`}
+              href={`#${item.mobNav}`}
             >
               {item.title}
             </a>

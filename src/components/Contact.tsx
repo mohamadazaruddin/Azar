@@ -2,6 +2,8 @@ import React, { useState, useRef, ChangeEvent, FormEvent } from "react";
 import ky from "ky";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const CrossSolid = dynamic(() => import("./Icons/CrossSolid"));
 const Arrow = dynamic(() => import("./Icons/Arrow"));
@@ -54,17 +56,21 @@ export default function ContactForm() {
         if (form.current) {
           form.current.reset();
         }
-        alert("Form submitted. Your message has been sent.");
+        toast.success("Your message has been sent.", {
+          autoClose: 3000,
+        });
       }
     } catch (error) {
-      console.error("Failed to send message", error);
-      alert("Failed to send message");
+      toast.error("Failed to send message.", {
+        autoClose: 3000,
+      });
     }
   };
 
   return (
     <>
       <div className="hidden md:block">
+        <ToastContainer />
         <div className="relative py-[100px] px-20" id="contact">
           <div className="absolute right-[200px] top-[400px] rotate-180">
             <Arrow height="100px" width="140px" color="#D117B8" />

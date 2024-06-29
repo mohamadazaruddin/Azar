@@ -50,15 +50,22 @@ export default function AboutUs() {
                 deliver products that not only look amazing but also function
                 flawlessly.
               </div>
-              <button className="bg-[#D117B8] rounded-full py-2 px-6 text-[18px] w-auto mt-10 hover:translate-x-[10px] ease-out duration-100">
-                Download CV
-              </button>
+              <a href="/cv.pdf" download>
+                <button className="bg-[#D117B8] rounded-full py-2 px-6 text-[18px] w-auto mt-10 hover:translate-x-[10px] ease-out duration-100">
+                  Download CV
+                </button>
+              </a>
             </div>
           </div>
         </div>
       </div>
-      <div className="block md:hidden" id="mobAbout">
+      <div className="block md:hidden text-center" id="mobAbout">
         <img src="/images/aboutus.png" alt="" className="w-full" />
+        <a href="/cv.pdf" download>
+          <button className="bg-[#D117B8] rounded-full py-2 px-6 text-[14px] w-auto hover:translate-x-[10px] translate-y-[-75px] ease-out duration-100 mx-auto">
+            Download CV
+          </button>
+        </a>
       </div>
     </>
   );
