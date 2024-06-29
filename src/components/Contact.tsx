@@ -1,8 +1,10 @@
 import React, { useState, useRef, ChangeEvent, FormEvent } from "react";
 import ky from "ky";
 import Image from "next/image";
-import Arrow from "./Icons/Arrow";
-import CrossSolid from "./Icons/CrossSolid";
+import dynamic from "next/dynamic";
+
+const CrossSolid = dynamic(() => import("./Icons/CrossSolid"));
+const Arrow = dynamic(() => import("./Icons/Arrow"));
 
 interface FormData {
   name: string;

@@ -8,8 +8,6 @@ import HeroSection from "@/components/HeroSection";
 import CrossSolid from "@/components/Icons/CrossSolid";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
-import { FollowerPointerCard } from "@/components/ui/following-pointer";
-import { TracingBeam } from "@/components/ui/tracing-beam";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { SetStateAction, useEffect, useRef, useState } from "react";

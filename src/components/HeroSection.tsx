@@ -1,7 +1,5 @@
 import React from "react";
 import { TypewriterEffect } from "./ui/typewriter-effect";
-import { TextGenerateEffect } from "./ui/text-generate-effect";
-import LinkedIn from "./Icons/LinkedIn";
 import { ReactTyped } from "react-typed";
 import Image from "next/image";
 
@@ -87,7 +85,11 @@ export default function HeroSection() {
               </div>
             </div>
             <div className="w-1/2 relative">
-              <img src="/images/profileImg2.png" alt="" className="h-[450px]" />
+              <img
+                src="/images/profileImg2.png"
+                alt=""
+                className="h-[450px] w-auto"
+              />
               <div className="absolute top-[0px] right-0">
                 {socialMedia.map((item, i) => (
                   <a href={`${item.href}`} target="_blank" key={i}>
@@ -134,7 +136,7 @@ export default function HeroSection() {
             <img
               src="/images/profileImg2.png"
               alt=""
-              className="h-[280px] mt-20"
+              className="h-[280px] mt-20 w-auto"
             />
             <div className="absolute top-[100px] right-5">
               {socialMedia.map((item, i) => (

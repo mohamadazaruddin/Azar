@@ -1,10 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import { BackgroundBeams } from "./ui/background-beams";
-import { TypewriterEffect } from "./ui/typewriter-effect";
-import Arrow from "./Icons/Arrow";
+import React, { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-
+import dynamic from "next/dynamic";
+const Arrow = dynamic(() => import("./Icons/Arrow"));
 export default function Skills() {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -174,11 +171,7 @@ export default function Skills() {
   return (
     <>
       <div className="hidden md:block">
-        <div
-          // ref={targetDivRef}
-          className="relative py-[100px] px-20"
-          id="skills"
-        >
+        <div className="relative py-[100px] px-20" id="skills">
           <Image
             src="/images/pinkDots.svg"
             alt=""

@@ -1,7 +1,7 @@
 import React from "react";
-import CrossOutline from "./Icons/CrossOutline";
 import Image from "next/image";
-
+import dynamic from "next/dynamic";
+const CrossOutline = dynamic(() => import("./Icons/CrossOutline"));
 export default function Follow() {
   const socialMedia = [
     {

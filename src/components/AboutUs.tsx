@@ -1,9 +1,7 @@
 import React from "react";
-import { Vortex } from "./ui/vortex";
-import { ContainerScroll } from "./ui/container-scroll-animation";
-import Arrow from "./Icons/Arrow";
-import { CardContainer } from "./ui/3d-card";
 import Image from "next/image";
+import dynamic from "next/dynamic";
+const Arrow = dynamic(() => import("./Icons/Arrow"));
 
 export default function AboutUs() {
   return (

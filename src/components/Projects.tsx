@@ -2,14 +2,15 @@
 import React, { useEffect, useState } from "react";
 
 import { PinContainer } from "./ui/3d-pin";
-import Arrow from "./Icons/Arrow";
+
 import Image from "next/image";
-import CrossSolid from "./Icons/CrossSolid";
-import CrossOutline from "./Icons/CrossOutline";
 import { useRouter } from "next/navigation";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 import Link from "next/link";
-
+import dynamic from "next/dynamic";
+const Arrow = dynamic(() => import("./Icons/Arrow"));
+const CrossSolid = dynamic(() => import("./Icons/CrossSolid"));
+const CrossOutline = dynamic(() => import("./Icons/CrossOutline"));
 export default function Projects({ isAll }: { isAll?: boolean }) {
   const projects = [
     {

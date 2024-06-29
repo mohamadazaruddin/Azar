@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import MenuIcon from "./Icons/MenuIcon";
-
+import React from "react";
+import dynamic from "next/dynamic";
+const MenuIcon = dynamic(() => import("./Icons/MenuIcon"));
 export default function Header(props: any) {
   const navItems = [
     {
