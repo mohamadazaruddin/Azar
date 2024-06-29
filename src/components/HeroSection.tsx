@@ -109,7 +109,7 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      <div className="block md:hidden">
+      <div className="block md:hidden" id="mobHome">
         <div className="mt-14 px-5 relative">
           <ReactTyped
             style={{

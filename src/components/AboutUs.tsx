@@ -59,7 +59,7 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
-      <div className="block md:hidden">
+      <div className="block md:hidden" id="mobAbout">
         <img src="/images/aboutus.png" alt="" className="w-full" />
       </div>
     </>

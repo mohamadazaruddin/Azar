@@ -137,7 +137,7 @@ export default function Projects({ isAll }: { isAll?: boolean }) {
           )}
         </div>
       </div>
-      <div className="block md:hidden px-5 mt-10 relative">
+      <div className="block md:hidden px-5 mt-10 relative" id="mobProjects">
         <h1 className={`text-[40px] font-semibold text-[#fff] text-right`}>
           My projects
         </h1>

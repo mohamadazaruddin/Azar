@@ -152,7 +152,7 @@ export default function ContactForm() {
           </div>
         </div>
       </div>
-      <div className="block md:hidden px-5 mt-10">
+      <div className="block md:hidden px-5 mt-10" id="mobContact">
         <h1 className="text-[40px] font-semibold text-[#fff] text-center ">
           Contact Me
         </h1>

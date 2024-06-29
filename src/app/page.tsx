@@ -21,31 +21,30 @@ export default function Home() {
     {
       isButton: false,
       title: "Home",
-      action: "home",
+      action: "mobHome",
     },
     {
       isButton: false,
       title: "About",
-      action: "about",
+      action: "mobAbout",
     },
     {
       isButton: false,
       title: "Skills",
-      action: "skills",
+      action: "mobSkills",
     },
     {
       isButton: false,
       title: "Projects",
-      action: "projects",
+      action: "mobProjects",
     },
 
     {
       isButton: false,
       title: "Contact",
-      action: "contact",
+      action: "mobContact",
     },
   ];
-  console.log("ff", navOpen);
 
   return (
     <main
@@ -68,12 +67,12 @@ export default function Home() {
         className={`${
           navOpen
             ? "w-full h-full  rounded-none duration-100"
-            : "h-0 w-0 rounded-bl-full duration-300"
+            : "h-0 w-0 rounded-bl-full duration-100"
         }  absolute  ease-linear top-[0px] right-0 z-50 bg-[url('/images/navBg.png')]`}
       >
         <div
           className={`${
-            navOpen ? "opacity-100 delay-800" : "opacity-0 w-0 h-0 "
+            navOpen ? "block delay-800" : "hidden w-0 h-0 "
           } duration-300 ease-linear delay-0`}
         >
           <div className="flex justify-between w-full px-5 mt-10">
@@ -90,11 +89,16 @@ export default function Home() {
           <div className="mt-10 pl-[58px]">
             {navItems.map((item, i) => (
               <div
+                key={i}
                 className={`${
                   item.title.toLowerCase() === viewSection.toLowerCase()
                     ? "text-[60px] text-[#BB64FF] font-semibold"
                     : "text-[40px] text-[#fff] font-medium"
                 } mt-2`}
+                onClick={() => {
+                  setNavOpen(!navOpen);
+                  setviewSection(item.title);
+                }}
               >
                 <a href={`#${item.action}`}> {item.title}</a>
               </div>
@@ -103,27 +107,25 @@ export default function Home() {
         </div>
       </div>
 
-      {!navOpen && (
-        <>
-          <Header
-            setviewSection={(section: SetStateAction<string>) =>
-              setviewSection(section)
-            }
-            setNavOpen={(view: SetStateAction<boolean>) => setNavOpen(view)}
-            viewSection={viewSection}
-            navOpen={navOpen}
-          />
-          {/* <FollowerPointerCard title={<>Guest</>}> */}
-          <HeroSection />
-          {/* </FollowerPointerCard> */}
-          <AboutUs />
-          <Skills />
-          <Projects />
-          <ContactForm />
-          <Follow />
-          <Footer />
-        </>
-      )}
+      <div className={`${navOpen ? "hidden" : "block"}`}>
+        <Header
+          setviewSection={(section: SetStateAction<string>) =>
+            setviewSection(section)
+          }
+          setNavOpen={(view: SetStateAction<boolean>) => setNavOpen(view)}
+          viewSection={viewSection}
+          navOpen={navOpen}
+        />
+        {/* <FollowerPointerCard title={<>Guest</>}> */}
+        <HeroSection />
+        {/* </FollowerPointerCard> */}
+        <AboutUs />
+        <Skills />
+        <Projects />
+        <ContactForm />
+        <Follow />
+        <Footer />
+      </div>
     </main>
   );
 }
