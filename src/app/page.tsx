@@ -8,12 +8,13 @@ import HeroSection from "@/components/HeroSection";
 import CrossSolid from "@/components/Icons/CrossSolid";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
+import ky from "ky";
 import { SetStateAction, useEffect, useRef, useState } from "react";
 
 export default function Home() {
   const [viewSection, setviewSection] = useState("Home");
-  const [navOpen, setNavOpen] = useState(false);
 
+  const [navOpen, setNavOpen] = useState(false);
   useEffect(() => {
     const fetchFoodoData = async () => {
       const foodo = await fetch("https://foodo-be.onrender.com");
@@ -56,6 +57,41 @@ export default function Home() {
     },
   ];
 
+  // adding view
+  const handleSubmit = async (userInfo: any) => {
+    const sendParams = {
+      userAgent: userInfo.userAgent,
+      screenSize: userInfo.screenSize,
+      browserLanguage: userInfo.browserLanguage,
+      browserPlatform: userInfo.browserPlatform,
+    };
+
+    try {
+      const response = await ky
+        .post(`/api/user/add-view`, { json: sendParams })
+        .json();
+    } catch (error) {}
+  };
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent;
+    const screenSize = {
+      width: window.screen.width,
+      height: window.screen.height,
+    };
+    const browserLanguage = navigator.language;
+    const browserPlatform = navigator.platform;
+    if (userAgent && screenSize && browserLanguage && browserPlatform) {
+      const userInfo = {
+        userAgent: userAgent,
+        screenSize: screenSize.width,
+        browserLanguage: browserLanguage,
+        browserPlatform: browserPlatform,
+      };
+
+      handleSubmit(userInfo);
+    }
+  }, []);
   return (
     <main
       style={{
