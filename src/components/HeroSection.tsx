@@ -128,7 +128,7 @@ export default function HeroSection() {
             className="text-[32px] mt-1 text-start"
           />
 
-          <div className="border-l border-[#9B9A9A] text-[#9B9A9A] text-xs w-[300px] pl-2 mt-[40px]">
+          <div className="border-l border-[#9B9A9A] text-[#9B9A9A] text-xs w-[200px] pl-2 mt-[40px]">
             i’M A UX DESIGNER AND A FULL STACK DEVELOPER. AND I WORK REMOTELY
             FROM ANYWHERE
           </div>
