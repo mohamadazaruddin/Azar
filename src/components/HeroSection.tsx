@@ -33,15 +33,15 @@ export default function HeroSection() {
   const words = [
     {
       text: "Hey,",
-      className: "text-[65px]",
+      className: "text-[40px]",
     },
     {
       text: "I'm",
-      className: "text-[65px]",
+      className: "text-[40px]",
     },
     {
-      text: "Azar",
-      className: "text-blue-500 dark:text-blue-500 text-[65px] ",
+      text: "Nishi",
+      className: "text-[#ffffff] text-[65px] ",
     },
   ];
   const mobWords = [
@@ -54,7 +54,7 @@ export default function HeroSection() {
       className: "text-[32px]",
     },
     {
-      text: "Azar",
+      text: "Nishi",
       className: "text-blue-500 dark:text-blue-500 text-[32px] ",
     },
   ];
@@ -63,14 +63,14 @@ export default function HeroSection() {
       <div className="hidden md:block">
         <div className=" px-20 pt-[100px] overflow-y-hidden" id="home">
           <div className="flex w-full">
-            <div className="w-1/2 ">
+            <div className="w-full text-center">
               <ReactTyped
                 style={{
                   fontSize: "40px",
-                  fontWeight: "regular",
+                  fontWeight: "bold",
                   color: "#9B9A9A",
                 }}
-                strings={["Full Stack Developer", "UI/UX Designer"]}
+                strings={["Frontend Developer"]}
                 typeSpeed={100}
                 loop
               />
@@ -79,9 +79,9 @@ export default function HeroSection() {
                 className="text-[65px] mt-3 text-start"
               />
 
-              <div className="border-l border-[#9B9A9A] text-[#9B9A9A] text-md w-[300px] pl-4 mt-[100px]">
-                i’M A UX DESIGNER AND A FULL STACK DEVELOPER. AND I WORK
-                REMOTELY FROM ANYWHERE
+              <div className="m-[auto] border-l border-[#9B9A9A] text-[#9B9A9A] text-md w-[410px] pl-4 mt-[100px]">
+                a passionate frontend developer with a keen eye for design and a
+                love for creating intuitive user experiences
               </div>
             </div>
             <div className="w-1/2 relative flex justify-start">

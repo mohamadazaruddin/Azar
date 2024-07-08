@@ -4,34 +4,28 @@ export default function Footer() {
   const navItems = [
     {
       isButton: false,
-      title: "Home",
-      action: "home",
-      mobNav: "mobHome",
+      icon: "Home",
+      link: "",
     },
     {
       isButton: false,
-      title: "About",
-      action: "about",
-      mobNav: "mobAbout",
+      icon: "Home",
+      link: "",
     },
     {
       isButton: false,
-      title: "Skills",
-      action: "skills",
-      mobNav: "mobSkills",
+      icon: "Home",
+      link: "",
     },
     {
       isButton: false,
-      title: "Projects",
-      action: "projects",
-      mobNav: "mobProjects",
+      icon: "Home",
+      link: "",
     },
-
     {
-      isButton: true,
-      title: "Contact me",
-      action: "contact",
-      mobNav: "mobContact",
+      isButton: false,
+      icon: "Home",
+      link: "",
     },
   ];
   return (
@@ -39,11 +33,11 @@ export default function Footer() {
       <div className="hidden md:block">
         <div className="px-[80px]">
           <div className=" h-[2px] w-full bg-[#D117B8]"></div>
-          <div className="mt-10 flex justify-between items-center">
+          <div className="mx-10">
             <div>
               <img src="/images/logo.svg" alt="" height="40" width="40" />
             </div>
-            <div className="flex gap-10 ">
+            <div className="flex gap-10 justify-center">
               {navItems.map((item, i) => (
                 <a
                   className="color-[#fff] text-md  duration-100 hover:scale-[1.09]"
