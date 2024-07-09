@@ -34,14 +34,23 @@ export default function Project() {
     {
       title: "EMS",
       imageUrl: "/images/projects/ems.svg",
+      href: "https://ems-ivory.vercel.app",
       detail:
         "An employee management system named EMS is designed to track employees in an organization. With EMS, you can view detailed information about each employee, including their profiles, roles, project ,team and chapters ",
     },
     {
       title: "UNIKA",
       imageUrl: "/images/projects/unika.svg",
+      href: "https://mohamadazaruddin.github.io/UNIKA-WEBSITE",
       detail:
         "A web app for showcasing personalized UI animations made using HTML, CSS, Bootstrap, and JS. View a collection of top UI animations, browse recently created animations, and explore detailed information about each animation. ",
+    },
+    {
+      title: "Inscribe",
+      imageUrl: "/images/projects/inscribe.png",
+      href: "https://inscribe-alpha.vercel.app",
+      detail:
+        "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
     },
   ];
   const { push } = useRouter();
