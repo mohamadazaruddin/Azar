@@ -52,6 +52,42 @@ export default function Project() {
       detail:
         "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
     },
+    {
+      title: "Pizza Shop",
+      imageUrl: "/images/projects/pizza.png",
+      href: "https://pizza-app-alpha.vercel.app",
+      detail:
+        "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
+    },
+    {
+      title: "Foxclore",
+      imageUrl: "/images/projects/foxclore.png",
+      href: "https://mohamadazaruddin.github.io/Foxclore-website/",
+      detail:
+        "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
+    },
+    {
+      title: "Tambola",
+      imageUrl: "/images/projects/tambola.png",
+      href: "https://mohamadazaruddin.github.io/Housiee-numbers/",
+      detail:
+        "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
+    },
+    {
+      title: "Screen Resolution viewer",
+      imageUrl: "/images/projects/resolution.png",
+      href: "https://mohamadazaruddin.github.io/Screen-Resolution/",
+      detail:
+        "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
+    },
+
+    {
+      title: "MY First Website",
+      imageUrl: "/images/projects/firstwebsite.png",
+      href: "https://mohamadazaruddin.github.io/My-First-website/index.html",
+      detail:
+        "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
+    },
   ];
   const { push } = useRouter();
 
@@ -141,7 +177,7 @@ export default function Project() {
               <CardItem translateZ="100" className="w-full ">
                 <Image
                   src={`${item.imageUrl}`}
-                  height="250"
+                  height="150"
                   width="25"
                   className="h-[150px] w-full object-cover rounded-xl group-hover/card:shadow-xl"
                   alt="thumbnail"
