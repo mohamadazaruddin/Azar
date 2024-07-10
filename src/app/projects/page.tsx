@@ -57,28 +57,35 @@ export default function Project() {
       imageUrl: "/images/projects/pizza.png",
       href: "https://pizza-app-alpha.vercel.app",
       detail:
-        "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
+        "a cutting-edge Website to showcase my UI development skills. Experience the seamless functionality of a progressive web app as you connect with others through innovative design and interactive features.",
+    },
+    {
+      title: "Solarius",
+      imageUrl: "/images/projects/nextdashboard.png",
+      href: "https://dashboard-next13-omega.vercel.app/dashboard",
+      detail:
+        "Discover our innovative platform highlighting the artistry of my UI skills, specifically showcasing the latest features of Nextjs v13 such as unique layouts",
     },
     {
       title: "Foxclore",
       imageUrl: "/images/projects/foxclore.png",
       href: "https://mohamadazaruddin.github.io/Foxclore-website/",
       detail:
-        "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
+        " A visually stunning platform that showcases my UI skills crafted with HTML, CSS, and Bootstrap, ensuring a responsive and seamless user experience",
     },
     {
       title: "Tambola",
       imageUrl: "/images/projects/tambola.png",
       href: "https://mohamadazaruddin.github.io/Housiee-numbers/",
       detail:
-        "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
+        "Tambola, an engaging online game that brings the classic fun of Housie to life. Immerse yourself in a world of numbers and excitement as you play and interact with others in this digital rendition",
     },
     {
       title: "Screen Resolution viewer",
       imageUrl: "/images/projects/resolution.png",
       href: "https://mohamadazaruddin.github.io/Screen-Resolution/",
       detail:
-        "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
+        "a simple and convenient website that displays your current screen resolution. Easily find out the specifications of your screen without even a click",
     },
 
     {
@@ -86,7 +93,7 @@ export default function Project() {
       imageUrl: "/images/projects/firstwebsite.png",
       href: "https://mohamadazaruddin.github.io/My-First-website/index.html",
       detail:
-        "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
+        "a nostalgic showcase of my first steps into frontend development. Experience the evolution of my skills and passion for creating visually appealing websites",
     },
   ];
   const { push } = useRouter();
