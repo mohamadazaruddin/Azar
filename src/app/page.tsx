@@ -1,13 +1,13 @@
 "use client";
-import AboutUs from "@/components/AboutUs";
-import ContactForm from "@/components/Contact";
-import Follow from "@/components/Follow";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import CrossSolid from "@/components/Icons/CrossSolid";
-import Projects from "@/components/Projects";
-import Skills from "@/components/Skills";
+import AboutUs from "@/app/components/AboutUs";
+import ContactForm from "@/app/components/Contact";
+import Follow from "@/app/components/Follow";
+import Footer from "@/app/components/Footer";
+import Header from "@/app/components/Header";
+import HeroSection from "@/app/components/HeroSection";
+import CrossSolid from "@/app/components/Icons/CrossSolid";
+import Projects from "@/app/components/Projects";
+import Skills from "@/app/components/Skills";
 import ky from "ky";
 import { SetStateAction, useEffect, useRef, useState } from "react";
 

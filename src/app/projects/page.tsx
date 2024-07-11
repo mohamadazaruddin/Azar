@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
-import { CardBody, CardContainer, CardItem } from "../../components/ui/3d-card";
-import { PinContainer } from "../../components/ui/3d-pin";
-import Projects from "@/components/Projects";
+import { CardBody, CardContainer, CardItem } from "../components/ui/3d-card";
 import Link from "next/link";
 import Image from "next/image";
-import Arrow from "@/components/Icons/Arrow";
+import Arrow from "@/app/components/Icons/Arrow";
 import { useRouter } from "next/navigation";
 
 export default function Project() {

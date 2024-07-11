@@ -6,4 +6,4 @@ const UserInfoModel = new mongoose.Schema({
   browserPlatform: String,
 });
 export const userInfoModel =
-  mongoose.models.userInfoModel || mongoose.model("userInfo", UserInfoModel);
+  mongoose.models.userInfoModel || mongoose.model("userinfos", UserInfoModel);
