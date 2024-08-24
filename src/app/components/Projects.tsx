@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { memo, useEffect, useState } from "react";
 
 import { PinContainer } from "./ui/3d-pin";
 
@@ -11,7 +11,7 @@ import dynamic from "next/dynamic";
 const Arrow = dynamic(() => import("./Icons/Arrow"));
 const CrossSolid = dynamic(() => import("./Icons/CrossSolid"));
 const CrossOutline = dynamic(() => import("./Icons/CrossOutline"));
-export default function Projects({ isAll }: { isAll?: boolean }) {
+const Projects = ({ isAll }: { isAll?: boolean }) => {
   const projects = [
     {
       title: "Color Fusion",
@@ -192,4 +192,5 @@ export default function Projects({ isAll }: { isAll?: boolean }) {
       </div>
     </>
   );
-}
+};
+export default memo(Projects);

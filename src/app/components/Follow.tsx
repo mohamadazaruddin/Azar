@@ -1,8 +1,8 @@
-import React from "react";
+import React, {memo } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 const CrossOutline = dynamic(() => import("./Icons/CrossOutline"));
-export default function Follow() {
+const Follow = () => {
   const socialMedia = [
     {
       img: "/images/socials/GITHUB.svg",
@@ -101,4 +101,5 @@ export default function Follow() {
       </div>
     </>
   );
-}
+};
+export default memo(Follow);

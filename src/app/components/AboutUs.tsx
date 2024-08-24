@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 const Arrow = dynamic(() => import("./Icons/Arrow"));
 
-export default function AboutUs() {
+const AboutUs = () => {
   return (
     <>
       <div className="hidden md:block">
@@ -69,4 +69,5 @@ export default function AboutUs() {
       </div>
     </>
   );
-}
+};
+export default memo(AboutUs);

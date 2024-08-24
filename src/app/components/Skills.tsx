@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 const Arrow = dynamic(() => import("./Icons/Arrow"));
-export default function Skills() {
+const Skills = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const stacksDetails = [
@@ -245,4 +245,5 @@ export default function Skills() {
       </div>
     </>
   );
-}
+};
+export default memo(Skills);

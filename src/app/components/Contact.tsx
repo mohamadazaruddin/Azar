@@ -1,4 +1,4 @@
-import React, { useState, useRef, ChangeEvent, FormEvent } from "react";
+import React, { useState, useRef, ChangeEvent, FormEvent, memo } from "react";
 import ky from "ky";
 import Image from "next/image";
 import dynamic from "next/dynamic";
@@ -14,7 +14,7 @@ interface FormData {
   message: string;
 }
 
-export default function ContactForm() {
+const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
 
   const [formData, setFormData] = useState<FormData>({
@@ -237,4 +237,5 @@ export default function ContactForm() {
       </div>
     </>
   );
-}
+};
+export default memo(ContactForm);

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { memo } from "react";
 import dynamic from "next/dynamic";
 const MenuIcon = dynamic(() => import("./Icons/MenuIcon"));
-export default function Header(props: any) {
+const Header = (props: any) => {
   const navItems = [
     {
       isButton: false,
@@ -83,4 +83,5 @@ export default function Header(props: any) {
       </div>
     </>
   );
-}
+};
+export default memo(Header);

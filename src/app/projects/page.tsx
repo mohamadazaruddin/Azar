@@ -111,7 +111,10 @@ export default function Project() {
       <div className="hidden md:block px-[80px]">
         <div
           className="absolute left-[100px] top-[50px] rotate-180 cursor-pointer"
-          onClick={() => push("/")}
+          onClick={() => {
+            push("/");
+            sessionStorage.setItem("visited", "true");
+          }}
         >
           <Arrow height="80px" width="180px" color="#D117B8" />
         </div>
@@ -169,7 +172,10 @@ export default function Project() {
       <div className="block md:hidden px-5 mt-10 relative">
         <div
           className="absolute left-[20px] top-[9px] rotate-180 cursor-pointer"
-          onClick={() => push("/")}
+          onClick={() => {
+            sessionStorage.setItem("visited", "true");
+            push("/");
+          }}
         >
           <Arrow height="48px" width="48px" color="#D117B8" />
         </div>

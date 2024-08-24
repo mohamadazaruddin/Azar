@@ -1,20 +1,21 @@
 "use client";
-import AboutUs from "@/app/components/AboutUs";
-import ContactForm from "@/app/components/Contact";
-import Follow from "@/app/components/Follow";
-import Footer from "@/app/components/Footer";
-import Header from "@/app/components/Header";
-import HeroSection from "@/app/components/HeroSection";
-import CrossSolid from "@/app/components/Icons/CrossSolid";
-import Projects from "@/app/components/Projects";
-import Skills from "@/app/components/Skills";
+import { SetStateAction, useEffect, useState } from "react";
+import dynamic from "next/dynamic";
 import ky from "ky";
-import { SetStateAction, useEffect, useRef, useState } from "react";
-
+const ContactForm = dynamic(() => import("@/app/components/Contact"));
+const Follow = dynamic(() => import("@/app/components/Follow"));
+const Footer = dynamic(() => import("@/app/components/Footer"));
+const Header = dynamic(() => import("@/app/components/Header"));
+const HeroSection = dynamic(() => import("@/app/components/HeroSection"));
+const CrossSolid = dynamic(() => import("@/app/components/Icons/CrossSolid"));
+const Projects = dynamic(() => import("@/app/components/Projects"));
+const Skills = dynamic(() => import("@/app/components/Skills"));
+const WelcomeBanner = dynamic(() => import("./components/WelcomeBanner"));
+const AboutUs = dynamic(() => import("@/app/components/AboutUs"));
 export default function Home() {
   const [viewSection, setviewSection] = useState("Home");
-
   const [navOpen, setNavOpen] = useState(false);
+  const [welcomeBanner, setWelcomeBanner] = useState(true);
   useEffect(() => {
     const fetchFoodoData = async () => {
       const foodo = await fetch("https://foodo-be.onrender.com");
@@ -26,6 +27,13 @@ export default function Home() {
     };
     fetchEmsData();
     fetchFoodoData();
+    if (sessionStorage.getItem("visited")) {
+      setWelcomeBanner(false);
+    } else {
+      setTimeout(() => {
+        setWelcomeBanner(false);
+      }, 5000);
+    }
   }, []);
 
   const navItems = [
@@ -104,73 +112,81 @@ export default function Home() {
       }}
       className="bg-[url('/images/mobBG.svg')] md:bg-[url('/images/bg.svg')]  py-10 relative"
     >
+      <WelcomeBanner welcomeBanner={welcomeBanner} />
+
       <div
-        style={{
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
         className={`${
-          navOpen
-            ? "w-full h-full  rounded-none duration-100"
-            : "h-0 w-0 rounded-bl-full duration-100"
-        }  absolute  ease-linear top-[0px] right-0 z-50 bg-[url('/images/navBg.png')]`}
+          welcomeBanner ? "hidden w-0 overflow-hidden" : ""
+        } ease-linear duration-100`}
       >
         <div
+          style={{
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+          }}
           className={`${
-            navOpen ? "block delay-800" : "hidden w-0 h-0 "
-          } duration-300 ease-linear delay-0`}
+            navOpen
+              ? "w-full h-full  rounded-none duration-100"
+              : "h-0 w-0 rounded-bl-full duration-100"
+          }  absolute  ease-linear top-[0px] right-0 z-50 bg-[url('/images/navBg.png')]`}
         >
-          <div className="flex justify-between w-full px-5 mt-10">
-            <img src="/images/logo.svg" alt="" height="40" width="40" />
-            <CrossSolid
-              height="18px"
-              width="18px"
-              color="#fff"
-              onClick={() => {
-                setNavOpen(false);
-              }}
-            />
-          </div>
-          <div className="mt-10 pl-[58px]">
-            {navItems.map((item, i) => (
-              <div
-                key={i}
-                className={`${
-                  item.title.toLowerCase() === viewSection.toLowerCase()
-                    ? "text-[60px] text-[#BB64FF] font-semibold"
-                    : "text-[40px] text-[#fff] font-medium"
-                } mt-2`}
+          <div
+            className={`${
+              navOpen ? "block delay-800" : "hidden w-0 h-0 "
+            } duration-300 ease-linear delay-0`}
+          >
+            <div className="flex justify-between w-full px-5 mt-10">
+              <img src="/images/logo.svg" alt="" height="40" width="40" />
+              <CrossSolid
+                height="18px"
+                width="18px"
+                color="#fff"
                 onClick={() => {
-                  setNavOpen(!navOpen);
-                  setviewSection(item.title);
+                  setNavOpen(false);
                 }}
-              >
-                <a href={`#${item.action}`}> {item.title}</a>
-              </div>
-            ))}
+              />
+            </div>
+            <div className="mt-10 pl-[58px]">
+              {navItems.map((item, i) => (
+                <div
+                  key={i}
+                  className={`${
+                    item.title.toLowerCase() === viewSection.toLowerCase()
+                      ? "text-[60px] text-[#BB64FF] font-semibold"
+                      : "text-[40px] text-[#fff] font-medium"
+                  } mt-2`}
+                  onClick={() => {
+                    setNavOpen(!navOpen);
+                    setviewSection(item.title);
+                  }}
+                >
+                  <a href={`#${item.action}`}> {item.title}</a>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      <div className={`${navOpen ? "hidden" : "block"}`}>
-        <Header
-          setviewSection={(section: SetStateAction<string>) =>
-            setviewSection(section)
-          }
-          setNavOpen={(view: SetStateAction<boolean>) => setNavOpen(view)}
-          viewSection={viewSection}
-          navOpen={navOpen}
-        />
-        {/* <FollowerPointerCard title={<>Guest</>}> */}
-        <HeroSection />
-        {/* </FollowerPointerCard> */}
-        <AboutUs />
-        <Skills />
-        <Projects />
-        <ContactForm />
-        <Follow />
-        <Footer />
+        <div className={`${navOpen ? "hidden" : "block"}`}>
+          <Header
+            setviewSection={(section: SetStateAction<string>) =>
+              setviewSection(section)
+            }
+            setNavOpen={(view: SetStateAction<boolean>) => setNavOpen(view)}
+            viewSection={viewSection}
+            navOpen={navOpen}
+          />
+          {/* <FollowerPointerCard title={<>Guest</>}> */}
+          <HeroSection />
+          {/* </FollowerPointerCard> */}
+          <AboutUs />
+          <Skills />
+          <Projects />
+          <ContactForm />
+          <Follow />
+          <Footer />
+        </div>
       </div>
     </main>
   );

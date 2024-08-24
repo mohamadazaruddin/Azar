@@ -1,6 +1,5 @@
-import React from "react";
-
-export default function Footer() {
+import React, { memo } from "react";
+const Footer = () => {
   const navItems = [
     {
       isButton: false,
@@ -76,4 +75,5 @@ export default function Footer() {
       </div>
     </>
   );
-}
+};
+export default memo(Footer);
