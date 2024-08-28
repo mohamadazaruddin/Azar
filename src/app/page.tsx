@@ -25,14 +25,19 @@ export default function Home() {
       const ems = await fetch("https://ems-be-eow5.onrender.com");
       const emsData = await ems.json();
     };
+    const fetchInscribeData = async () => {
+      const inacribe = await fetch("https://inscribe-be.onrender.com");
+      const inacribeData = await inacribe.json();
+    };
     fetchEmsData();
     fetchFoodoData();
+    fetchInscribeData();
     if (sessionStorage.getItem("visited")) {
       setWelcomeBanner(false);
     } else {
       setTimeout(() => {
         setWelcomeBanner(false);
-      }, 5000);
+      }, 4000);
     }
   }, []);
 

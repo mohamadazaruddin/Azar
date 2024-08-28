@@ -82,7 +82,7 @@ const HeroSection = () => {
                 className="text-[65px] mt-3 text-start"
               />
               <div className="border-l border-[#9B9A9A] text-[#9B9A9A] text-md w-[300px] pl-4 mt-[100px]">
-                I’m A UX DESIGNER AND A FULL STACK DEVELOPER. AND I WORK
+                I’M A FULL STACK DEVELOPER AND A UX DESIGNER. AND I WORK
                 REMOTELY FROM ANYWHERE
               </div>
             </div>
@@ -130,7 +130,7 @@ const HeroSection = () => {
             className="text-[32px] mt-1 text-start"
           />
           <div className="border-l border-[#9B9A9A] text-[#9B9A9A] text-xs w-[200px] pl-2 mt-[40px]">
-            I’m A UX DESIGNER AND A FULL STACK DEVELOPER. AND I WORK REMOTELY
+            I’M A UX DESIGNER AND A FULL STACK DEVELOPER. AND I WORK REMOTELY
             FROM ANYWHERE
           </div>
           <div>

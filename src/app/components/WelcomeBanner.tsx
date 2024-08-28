@@ -37,7 +37,7 @@ const WelcomeBanner = (props: any) => {
     if (index < names.length) {
       setWelcomeText(names[index]);
       index++;
-      setTimeout(displayNames, 4000 / names.length);
+      setTimeout(displayNames, 3000 / names.length);
     }
   }
   useEffect(() => {
@@ -49,7 +49,7 @@ const WelcomeBanner = (props: any) => {
       <div
         className={` ${
           props.welcomeBanner ? "h-full" : "h-0 overflow-hidden"
-        } w-full bg-black flex items-center ease-in duration-800 absolute z-[1000] top-0 left-0 right-0 bottom-0 justify-center text-[32px] sm:text-md`}
+        } w-full bg-black flex items-center linear duration-500 absolute z-[1000] top-0 left-0 right-0 bottom-0 justify-center text-[32px] sm:text-md`}
       >
         {welcomeText}
       </div>
