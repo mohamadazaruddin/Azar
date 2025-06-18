@@ -88,7 +88,7 @@ const Projects = ({ isAll }: { isAll?: boolean }) => {
               isAll ? "text-center" : "text-right"
             }  space-x-3 mr-20 leading-[80px]`}
           >
-            My projects
+            My Projects
           </h1>
           <div className="mt-24 w-[1000px] mx-auto">
             {projectData.map(({ title, href, detail, imageUrl }, i) => (
@@ -102,10 +102,18 @@ const Projects = ({ isAll }: { isAll?: boolean }) => {
                   <div className="text-[#9857D3] text-[16px] font-semibold">
                     Featured Project
                   </div>
-                  <div className="text-[#CCD6F6] text-[34px] font-semibold pb-4">
+                  <div
+                    style={{
+                      color: "#CCD6F6",
+                    }}
+                    className="text-[#CCD6F6] text-[34px] font-semibold pb-4"
+                  >
                     {title}
                   </div>
                   <div
+                    style={{
+                      color: "#CCD6F6",
+                    }}
                     className={`bg-background/10 backdrop-blur-[16px] z-[999] backdrop-saturate-150 before:bg-white/10 border-white/20 border-1 p-4 rounded-xl absolute w-[550px] ${
                       i % 2 === 0 ? "text-start" : "text-end"
                     }`}

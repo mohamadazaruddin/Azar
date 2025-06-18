@@ -45,28 +45,32 @@ export default function Home() {
     {
       isButton: false,
       title: "Home",
-      action: "mobHome",
+      action: "#mobHome",
     },
     {
       isButton: false,
       title: "About",
-      action: "mobAbout",
+      action: "#mobAbout",
     },
     {
       isButton: false,
       title: "Skills",
-      action: "mobSkills",
+      action: "#mobSkills",
     },
     {
       isButton: false,
       title: "Projects",
-      action: "mobProjects",
+      action: "#mobProjects",
     },
-
+    {
+      isButton: false,
+      title: "Certifications",
+      action: "/certifications",
+    },
     {
       isButton: false,
       title: "Contact",
-      action: "mobContact",
+      action: "#mobContact",
     },
   ];
 
@@ -166,7 +170,7 @@ export default function Home() {
                     setviewSection(item.title);
                   }}
                 >
-                  <a href={`#${item.action}`}> {item.title}</a>
+                  <a href={`${item.action}`}> {item.title}</a>
                 </div>
               ))}
             </div>

@@ -6,28 +6,33 @@ const Header = (props: any) => {
     {
       isButton: false,
       title: "Home",
-      action: "home",
+      action: "#home",
     },
     {
       isButton: false,
       title: "About",
-      action: "about",
+      action: "#about",
     },
     {
       isButton: false,
       title: "Skills",
-      action: "skills",
+      action: "#skills",
+    },
+    {
+      isButton: false,
+      title: "Certifications",
+      action: "/certifications",
     },
     {
       isButton: false,
       title: "Projects",
-      action: "projects",
+      action: "#projects",
     },
 
     {
       isButton: true,
       title: "Contact me",
-      action: "contact",
+      action: "#contact",
     },
   ];
 
@@ -59,7 +64,7 @@ const Header = (props: any) => {
                       <a href="#contact"> Contact me</a>
                     </div>
                   ) : (
-                    <a href={`#${item.action}`}> {item.title}</a>
+                    <a href={`${item.action}`}>{item.title}</a>
                   )}
                 </div>
               ))}

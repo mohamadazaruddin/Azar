@@ -6,99 +6,42 @@ import Image from "next/image";
 import Arrow from "@/app/components/Icons/Arrow";
 import { useRouter } from "next/navigation";
 
-export default function Project() {
+export default function Certifications() {
   const projects = [
     {
-      title: "Color Fusion",
+      title: "AWS Beginners",
       href: "https://color-fusion.vercel.app",
-      imageUrl: "/images/projects/color-fusion.svg",
+      imageUrl: "/images/certificates/aws-beginners.jpg",
       detail:
-        "A web app named Color Fusion designed to help designers pick colors for their designs. Explore various color palettes and pre-defined components to experiment with and select the perfect color schemes for your design projects.",
+        "Demonstrates foundational knowledge of Amazon Web Services, covering core cloud concepts, basic AWS services, and essential best practices for beginners.",
     },
     {
-      title: "Taskblitz",
-      imageUrl: "/images/projects/taskblitz.svg",
-      href: "https://taskblitz.vercel.app",
+      title: "Flutter Beginners",
+      href: "https://color-fusion.vercel.app",
+      imageUrl: "/images/certificates/flutter-beginner.jpg",
       detail:
-        "A web app called TaskBlitz designed to help users track their tasks efficiently. Organize and manage your tasks, set priorities, and track progress towards completion. Create and save new task lists based on existing tasks.",
+        "Recognizes foundational skills in Flutter development, including building cross-platform mobile apps, widgets, layouts, and essential Dart programming concepts.",
     },
     {
-      title: "Movies Hub",
-      href: "https://movies-hub-fawn.vercel.app",
-      imageUrl: "/images/projects/moviesHub.svg",
+      title: "UI/UX Beginners",
+      href: "https://color-fusion.vercel.app",
+      imageUrl: "/images/certificates/uiux-beginners.jpg",
       detail:
-        "A web app named Movies Hub that allows users to search for movies, watch trailers, and view ratings of each movie. The app also provides additional information like cast, directors, plot summaries, and user reviews to help users",
+        "Highlights foundational understanding of user interface and user experience design principles, wireframing, prototyping, creating, user-friendly digital experiences.",
     },
     {
-      title: "EMS",
-      imageUrl: "/images/projects/ems.svg",
-      href: "https://ems-ivory.vercel.app",
+      title: "Frontend Development",
+      href: "https://color-fusion.vercel.app",
+      imageUrl: "/images/certificates/frontend.png",
       detail:
-        "An employee management system named EMS is designed to track employees in an organization. With EMS, you can view detailed information about each employee, including their profiles, roles, project ,team and chapters ",
+        "Demonstrates foundational skills in building user interfaces for websites and web applications, including knowledge of HTML, CSS, JavaScript, and basic responsive design principles.",
     },
     {
-      title: "UNIKA",
-      imageUrl: "/images/projects/unika.svg",
-      href: "https://mohamadazaruddin.github.io/UNIKA-WEBSITE",
+      title: "TCS-Young Professional",
+      href: "https://color-fusion.vercel.app",
+      imageUrl: "/images/certificates/tcsion.jpg",
       detail:
-        "A web app for showcasing personalized UI animations made using HTML, CSS, Bootstrap, and JS. View a collection of top UI animations, browse recently created animations, and explore detailed information about each animation. ",
-    },
-    {
-      title: "Inscribe",
-      imageUrl: "/images/projects/inscribe.png",
-      href: "https://inscribe-alpha.vercel.app",
-      detail:
-        "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
-    },
-    {
-      title: "Pizza Shop",
-      imageUrl: "/images/projects/pizza.png",
-      href: "https://pizza-app-alpha.vercel.app",
-      detail:
-        "a cutting-edge Website to showcase my UI development skills. Experience the seamless functionality of a progressive web app as you connect with others through innovative design and interactive features.",
-    },
-    {
-      title: "Solarius",
-      imageUrl: "/images/projects/nextdashboard.png",
-      href: "https://dashboard-next13-omega.vercel.app/dashboard",
-      detail:
-        "Discover our innovative platform highlighting the artistry of my UI skills, specifically showcasing the latest features of Nextjs v13 such as unique layouts",
-    },
-    {
-      title: "Foxclore",
-      imageUrl: "/images/projects/foxclore.png",
-      href: "https://mohamadazaruddin.github.io/Foxclore-website/",
-      detail:
-        " A visually stunning platform that showcases my UI skills crafted with HTML, CSS, and Bootstrap, ensuring a responsive and seamless user experience",
-    },
-    {
-      title: "Tambola",
-      imageUrl: "/images/projects/tambola.png",
-      href: "https://mohamadazaruddin.github.io/Housiee-numbers/",
-      detail:
-        "Tambola, an engaging online game that brings the classic fun of Housie to life. Immerse yourself in a world of numbers and excitement as you play and interact with others in this digital rendition",
-    },
-    {
-      title: "Screen Resolution viewer",
-      imageUrl: "/images/projects/resolution.png",
-      href: "https://mohamadazaruddin.github.io/Screen-Resolution/",
-      detail:
-        "a simple and convenient website that displays your current screen resolution. Easily find out the specifications of your screen without even a click",
-    },
-
-    {
-      title: "Word Slider",
-      imageUrl: "/images/projects/wordslider.svg",
-      href: "https://mohamadazaruddin.github.io/WordSlider",
-      detail:
-        "a nostalgic showcase of my first steps into frontend development. Experience the evolution of my skills and passion for creating visually appealing websites",
-    },
-    {
-      title: "MY First Website",
-      imageUrl: "/images/projects/firstwebsite.png",
-      href: "https://mohamadazaruddin.github.io/My-First-website/index.html",
-      detail:
-        "A simple app that turns your text into a stylish, animated word slider. Enter any text, customize the look, and watch your words slide across the screen",
+        "Certifies completion of TCS’s program on workplace skills, communication, and basic IT/business knowledge for entry-level roles.",
     },
   ];
   const { push } = useRouter();
@@ -129,7 +72,7 @@ export default function Project() {
         <h1
           className={`text-[80px] font-semibold text-[#fff] text-right space-x-3 mr-20 leading-[80px]`}
         >
-          Projects
+          Certificates
         </h1>
         {/* <Projects isAll={true} /> */}
 
@@ -160,7 +103,7 @@ export default function Project() {
                   {item.detail}
                 </CardItem>
 
-                <div className="flex justify-between items-center mt-5">
+                {/* <div className="flex justify-between items-center mt-5">
                   <CardItem
                     translateZ={20}
                     as={Link}
@@ -170,7 +113,7 @@ export default function Project() {
                   >
                     Visit now →
                   </CardItem>
-                </div>
+                </div> */}
               </CardBody>
             </CardContainer>
           ))}
@@ -187,7 +130,7 @@ export default function Project() {
           <Arrow height="48px" width="48px" color="#D117B8" />
         </div>
         <h1 className={`text-[40px] font-semibold text-[#fff] text-right`}>
-          Projects
+          Certificates
         </h1>
         {projects.map((item, i) => (
           <CardContainer className="inter-var py-0 mt-5" key={i}>
@@ -215,7 +158,7 @@ export default function Project() {
                 {item.detail}
               </CardItem>
 
-              <div className="flex justify-between items-center mt-5">
+              {/* <div className="flex justify-between items-center mt-5">
                 <CardItem
                   translateZ={20}
                   as={Link}
@@ -225,7 +168,7 @@ export default function Project() {
                 >
                   Visit now
                 </CardItem>
-              </div>
+              </div> */}
             </CardBody>
           </CardContainer>
         ))}

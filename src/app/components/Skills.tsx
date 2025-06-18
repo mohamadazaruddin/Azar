@@ -187,7 +187,7 @@ const Skills = () => {
             height={380}
           />
           <h1 className="  text-[80px] font-semibold text-[#fff]  space-x-3 pl-20   leading-[80px]  ">
-            My skills
+            My Skills
           </h1>
 
           <Image

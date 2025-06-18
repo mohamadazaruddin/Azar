@@ -1,37 +1,42 @@
 import React, { memo } from "react";
 const Footer = () => {
   const navItems = [
-    {
-      isButton: false,
-      title: "Home",
-      action: "home",
-      mobNav: "mobHome",
-    },
+    // {
+    //   isButton: false,
+    //   title: "Home",
+    //   action: "#home",
+    //   mobNav: "mobHome",
+    // },
     {
       isButton: false,
       title: "About",
-      action: "about",
+      action: "#about",
       mobNav: "mobAbout",
     },
     {
       isButton: false,
       title: "Skills",
-      action: "skills",
+      action: "#skills",
       mobNav: "mobSkills",
     },
     {
       isButton: false,
       title: "Projects",
-      action: "projects",
+      action: "#projects",
       mobNav: "mobProjects",
     },
-
     {
-      isButton: true,
-      title: "Contact me",
-      action: "contact",
-      mobNav: "mobContact",
+      isButton: false,
+      title: "Certifications",
+      action: "/certifications",
+      mobNav: "mobCertificates",
     },
+    // {
+    //   isButton: true,
+    //   title: "Contact me",
+    //   action: "#contact",
+    //   mobNav: "mobContact",
+    // },
   ];
   return (
     <>
@@ -47,7 +52,7 @@ const Footer = () => {
                 <a
                   className="color-[#fff] text-md  duration-100 hover:scale-[1.09]"
                   key={i}
-                  href={`#${item.action}`}
+                  href={`${item.action}`}
                 >
                   {item.title}
                 </a>
@@ -63,7 +68,7 @@ const Footer = () => {
             <a
               className="color-[#fff] text-sm  duration-100 hover:scale-[1.09]"
               key={i}
-              href={`#${item.mobNav}`}
+              href={`${item.mobNav}`}
             >
               {item.title}
             </a>
