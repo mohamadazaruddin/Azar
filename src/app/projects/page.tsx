@@ -37,6 +37,13 @@ export default function Project() {
         "An employee management system named EMS is designed to track employees in an organization. With EMS, you can view detailed information about each employee, including their profiles, roles, project ,team and chapters ",
     },
     {
+      title: "Fee Tracker",
+      imageUrl: "/images/projects/feeTracker.png",
+      href: "https://fee-tracker-beta.netlify.app",
+      detail:
+        "A web app for managing and tracking student fee payments,View a collection of all students, browse recent payment transactions, and explore detailed information about each student’s payment history",
+    },
+    {
       title: "UNIKA",
       imageUrl: "/images/projects/unika.svg",
       href: "https://mohamadazaruddin.github.io/UNIKA-WEBSITE",
