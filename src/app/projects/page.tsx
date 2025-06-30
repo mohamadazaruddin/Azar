@@ -12,6 +12,7 @@ export default function Project() {
       title: "Color Fusion",
       href: "https://color-fusion.vercel.app",
       imageUrl: "/images/projects/color-fusion.svg",
+      stacks: ["Next JS", "AppWrite", "Chakra UI"],
       detail:
         "A web app named Color Fusion designed to help designers pick colors for their designs. Explore various color palettes and pre-defined components to experiment with and select the perfect color schemes for your design projects.",
     },
@@ -19,6 +20,7 @@ export default function Project() {
       title: "Taskblitz",
       imageUrl: "/images/projects/taskblitz.svg",
       href: "https://taskblitz.vercel.app",
+      stacks: ["Next JS", "Chakra UI", "AppWrite"],
       detail:
         "A web app called TaskBlitz designed to help users track their tasks efficiently. Organize and manage your tasks, set priorities, and track progress towards completion. Create and save new task lists based on existing tasks.",
     },
@@ -26,6 +28,7 @@ export default function Project() {
       title: "Movies Hub",
       href: "https://movies-hub-fawn.vercel.app",
       imageUrl: "/images/projects/moviesHub.svg",
+      stacks: ["React JS", "SASS", "Vite"],
       detail:
         "A web app named Movies Hub that allows users to search for movies, watch trailers, and view ratings of each movie. The app also provides additional information like cast, directors, plot summaries, and user reviews to help users",
     },
@@ -33,6 +36,7 @@ export default function Project() {
       title: "EMS",
       imageUrl: "/images/projects/ems.svg",
       href: "https://ems-ivory.vercel.app",
+      stacks: ["Next JS", "MySQL", "Nest JS", "Express"],
       detail:
         "An employee management system named EMS is designed to track employees in an organization. With EMS, you can view detailed information about each employee, including their profiles, roles, project ,team and chapters ",
     },
@@ -40,6 +44,7 @@ export default function Project() {
       title: "Fee Tracker",
       imageUrl: "/images/projects/feeTracker.png",
       href: "https://fee-tracker-beta.netlify.app",
+      stacks: ["Angular JS", "Bootstrap", "Node JS", "Mongo"],
       detail:
         "A web app for managing and tracking student fee payments,View a collection of all students, browse recent payment transactions, and explore detailed information about each student’s payment history",
     },
@@ -47,6 +52,7 @@ export default function Project() {
       title: "UNIKA",
       imageUrl: "/images/projects/unika.svg",
       href: "https://mohamadazaruddin.github.io/UNIKA-WEBSITE",
+      stacks: ["HTML", "Bootstrap", "CSS", "JS"],
       detail:
         "A web app for showcasing personalized UI animations made using HTML, CSS, Bootstrap, and JS. View a collection of top UI animations, browse recently created animations, and explore detailed information about each animation. ",
     },
@@ -54,6 +60,7 @@ export default function Project() {
       title: "Inscribe",
       imageUrl: "/images/projects/inscribe.png",
       href: "https://inscribe-alpha.vercel.app",
+      stacks: ["React JS", "Tailwind", "Node JS", "Mongo"],
       detail:
         "A social media platform that lets users express their thoughts and emotions through posts, and engage with others by liking and commenting on their content. Join Inscribe today and connect with people through the power of words.",
     },
@@ -61,6 +68,7 @@ export default function Project() {
       title: "Pizza Shop",
       imageUrl: "/images/projects/pizza.png",
       href: "https://pizza-app-alpha.vercel.app",
+      stacks: ["Next JS", "Chakra UI", "Typescript"],
       detail:
         "a cutting-edge Website to showcase my UI development skills. Experience the seamless functionality of a progressive web app as you connect with others through innovative design and interactive features.",
     },
@@ -68,6 +76,7 @@ export default function Project() {
       title: "Solarius",
       imageUrl: "/images/projects/nextdashboard.png",
       href: "https://dashboard-next13-omega.vercel.app/dashboard",
+      stacks: ["Next JS", "Tailwind", "Typescript"],
       detail:
         "Discover our innovative platform highlighting the artistry of my UI skills, specifically showcasing the latest features of Nextjs v13 such as unique layouts",
     },
@@ -75,6 +84,7 @@ export default function Project() {
       title: "Foxclore",
       imageUrl: "/images/projects/foxclore.png",
       href: "https://mohamadazaruddin.github.io/Foxclore-website/",
+      stacks: ["HTML", "CSS", "Bootstrap", "JS"],
       detail:
         " A visually stunning platform that showcases my UI skills crafted with HTML, CSS, and Bootstrap, ensuring a responsive and seamless user experience",
     },
@@ -82,6 +92,7 @@ export default function Project() {
       title: "Tambola",
       imageUrl: "/images/projects/tambola.png",
       href: "https://mohamadazaruddin.github.io/Housiee-numbers/",
+      stacks: ["HTML", "CSS", "JS"],
       detail:
         "Tambola, an engaging online game that brings the classic fun of Housie to life. Immerse yourself in a world of numbers and excitement as you play and interact with others in this digital rendition",
     },
@@ -89,6 +100,7 @@ export default function Project() {
       title: "Screen Resolution viewer",
       imageUrl: "/images/projects/resolution.png",
       href: "https://mohamadazaruddin.github.io/Screen-Resolution/",
+      stacks: ["HTML", "CSS", "JS"],
       detail:
         "a simple and convenient website that displays your current screen resolution. Easily find out the specifications of your screen without even a click",
     },
@@ -97,6 +109,7 @@ export default function Project() {
       title: "Word Slider",
       imageUrl: "/images/projects/wordslider.svg",
       href: "https://mohamadazaruddin.github.io/WordSlider",
+      stacks: ["HTML", "CSS", "JS"],
       detail:
         "a nostalgic showcase of my first steps into frontend development. Experience the evolution of my skills and passion for creating visually appealing websites",
     },
@@ -104,6 +117,7 @@ export default function Project() {
       title: "MY First Website",
       imageUrl: "/images/projects/firstwebsite.png",
       href: "https://mohamadazaruddin.github.io/My-First-website/index.html",
+      stacks: ["HTML", "CSS", "JS"],
       detail:
         "A simple app that turns your text into a stylish, animated word slider. Enter any text, customize the look, and watch your words slide across the screen",
     },
@@ -162,10 +176,26 @@ export default function Project() {
                 <CardItem
                   as="p"
                   translateZ="60"
-                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 line-clamp-3"
                 >
                   {item.detail}
                 </CardItem>
+                <div className="flex gap-2 items-center mt-5">
+                  {item.stacks.map((stack, i) => (
+                    <CardItem
+                      as="div"
+                      key={i}
+                      translateZ="60"
+                      style={{
+                        background:
+                          "radial-gradient(circle, rgb(41 5 68) 20%, rgb(0, 0, 0) 100%);",
+                      }}
+                      className="px-3 py-1 rounded-full text-sm font-light backdrop-blur-lg border border-white/50 shadow-lg"
+                    >
+                      {stack}
+                    </CardItem>
+                  ))}
+                </div>
 
                 <div className="flex justify-between items-center mt-5">
                   <CardItem
@@ -173,7 +203,7 @@ export default function Project() {
                     as={Link}
                     href={`${item.href}`}
                     target="__blank"
-                    className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                    className="px-4 py-2 rounded-xl text-md font-normal dark:text-white"
                   >
                     Visit now →
                   </CardItem>
