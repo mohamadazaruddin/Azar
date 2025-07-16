@@ -49,6 +49,14 @@ export default function Project() {
         "A web app for managing and tracking student fee payments,View a collection of all students, browse recent payment transactions, and explore detailed information about each student’s payment history",
     },
     {
+      title: "Defino",
+      imageUrl: "/images/projects/defino.png",
+      href: "https://mohamadazaruddin.github.io/defino-web/",
+      stacks: ["React Native", "Typescript", "CSS"],
+      detail:
+        "Defino is a dictionary app built with React Native for Android and iOS devices. It allows users to search for word meanings, synonyms, and definitions on the go. Defino offers a fast, intuitive, and mobile-friendly vocabulary experience",
+    },
+    {
       title: "UNIKA",
       imageUrl: "/images/projects/unika.svg",
       href: "https://mohamadazaruddin.github.io/UNIKA-WEBSITE",
@@ -187,8 +195,9 @@ export default function Project() {
                       key={i}
                       translateZ="60"
                       style={{
-                        background:
-                          "radial-gradient(circle, rgb(41 5 68) 20%, rgb(0, 0, 0) 100%);",
+                        "backdrop-filter": "blur(17px) saturate(200%)",
+                        "-webkit-backdrop-filter": "blur(17px) saturate(200%)",
+                        "background-color": "rgba(98, 98, 98, 0.23)",
                       }}
                       className="px-3 py-1 rounded-full text-sm font-light backdrop-blur-lg border border-white/50 shadow-lg"
                     >
