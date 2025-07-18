@@ -1,4 +1,4 @@
-import React, {memo } from "react";
+import React, { memo } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 const CrossOutline = dynamic(() => import("./Icons/CrossOutline"));
@@ -44,7 +44,7 @@ const Follow = () => {
             className="absolute  top-[200px] left-[165px]    h-[150px] w-[300px]"
           />
           <div className="absolute left-[80px] top-[-60px] rotate-12	">
-            <CrossOutline height="50px" width="50px" color="#D117B8" />
+            <CrossOutline height="50px" width="50px" color="#6717d1" />
           </div>
           <div className="flex justify-between items-center">
             <div>

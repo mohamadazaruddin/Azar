@@ -42,7 +42,7 @@ const Footer = () => {
     <>
       <div className="hidden md:block">
         <div className="px-[80px]">
-          <div className=" h-[2px] w-full bg-[#D117B8]"></div>
+          <div className=" h-[2px] w-full bg-[#6717d1]"></div>
           <div className="mt-10 flex justify-between items-center">
             <div>
               <img src="/images/logo.svg" alt="" height="40" width="40" />
@@ -62,7 +62,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="block md:hidden px-5 mt-10">
-        <div className=" h-[2px] w-full bg-[#D117B8]"></div>
+        <div className=" h-[2px] w-full bg-[#6717d1]"></div>
         <div className="flex justify-between mt-5 ">
           {navItems.map((item, i) => (
             <a

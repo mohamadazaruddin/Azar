@@ -52,13 +52,13 @@ const Projects = ({ isAll }: { isAll?: boolean }) => {
           {!isAll && (
             <>
               <div className="absolute left-[100px] top-24">
-                <Arrow height="100px" width="340px" color="#D117B8" />
+                <Arrow height="100px" width="340px" color="#6717d1" />
               </div>
               <div className="absolute right-[100px] top-[860px] rotate-12	">
-                <CrossSolid height="50px" width="50px" color="#D117B8" />
+                <CrossSolid height="50px" width="50px" color="#6717d1" />
               </div>
               <div className="absolute left-[100px] top-[1260px] rotate-12	">
-                <CrossOutline height="50px" width="50px" color="#D117B8" />
+                <CrossOutline height="50px" width="50px" color="#6717d1" />
               </div>
               <Image
                 src="/images/dotstray.svg"
@@ -104,19 +104,21 @@ const Projects = ({ isAll }: { isAll?: boolean }) => {
                   </div>
                   <div
                     style={{
-                      color: "#CCD6F6",
+                      color: "#ffffff",
                     }}
-                    className="text-[#CCD6F6] text-[34px] font-semibold pb-4"
+                    className="text-[#ffffff] text-[34px] font-semibold pb-4"
                   >
                     {title}
                   </div>
                   <div
                     style={{
-                      color: "#CCD6F6",
+                      color: "#ffffff",
                     }}
-                    className={`bg-background/10 backdrop-blur-[16px] z-[999] backdrop-saturate-150 before:bg-white/10 border-white/20 border-1 p-4 rounded-xl absolute w-[550px] ${
-                      i % 2 === 0 ? "text-start" : "text-end"
-                    }`}
+                    className={` bg-[rgba(98,98,98,0.23)]
+  text-[#ffffff]
+  backdrop-blur-[17px] border border-[rgba(255,255,255,0.125)]  z-[9]  p-4 rounded-xl absolute w-[550px] ${
+    i % 2 === 0 ? "text-start" : "text-end"
+  }`}
                   >
                     {detail}
                   </div>
@@ -137,7 +139,7 @@ const Projects = ({ isAll }: { isAll?: boolean }) => {
               <button
                 type="button"
                 onClick={() => push("/projects")}
-                className="bg-[#d117b8] rounded-full py-1 px-6 text-[16px] w-auto mt-10 hover:translate-x-[10px] ease-out duration-100 flex items-center gap-4 mx-auto "
+                className="bg-[#6717d1] rounded-full py-1 px-6 text-[16px] w-auto mt-10 hover:translate-x-[10px] ease-out duration-100 flex items-center gap-4 mx-auto "
               >
                 View All
                 <Arrow height="30px" width="24px" color="#fff" />
@@ -152,7 +154,7 @@ const Projects = ({ isAll }: { isAll?: boolean }) => {
         </h1>
         {projects.map((item, i) => (
           <CardContainer className="inter-var py-0 mt-5" key={i}>
-            <CardBody className="bg-black-50 relative group/card   dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 border  ">
+            <CardBody className="bg-[rgba(98,98,98,0.23)] text-[#ffffff]  backdrop-blur-[17px] border border-[rgba(255,255,255,0.125)]  relative group/card   w-full h-auto rounded-xl p-4 border  ">
               <CardItem translateZ="100" className="w-full ">
                 <Image
                   src={`${item.imageUrl}`}
@@ -193,7 +195,7 @@ const Projects = ({ isAll }: { isAll?: boolean }) => {
         <button
           type="button"
           onClick={() => push("/projects")}
-          className="bg-[#d117b8] rounded-full py-1 px-6 text-[16px] w-auto mt-6 hover:translate-x-[10px] ease-out duration-100 flex items-center gap-4 mx-auto "
+          className="bg-[#6717d1] rounded-full py-1 px-6 text-[16px] w-auto mt-6 hover:translate-x-[10px] ease-out duration-100 flex items-center gap-4 mx-auto "
         >
           View All <Arrow height="30px" width="24px" color="#fff" />
         </button>

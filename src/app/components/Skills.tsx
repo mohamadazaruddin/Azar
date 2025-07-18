@@ -7,167 +7,157 @@ const Skills = () => {
 
   const stacksDetails = [
     {
-      img: "/images/stacks/ANGULAR.svg",
-      height: 70,
-      width: 70,
-      left: 700,
-      top: 300,
+      name: "Angular",
+      logo: "/images/stacks/ANGULAR.svg",
     },
     {
-      img: "/images/stacks/APPWRITE.svg",
-      height: 65,
-      width: 65,
-      left: 0,
-      top: 350,
+      name: "Appwrite",
+      logo: "/images/stacks/APPWRITE.svg",
     },
     {
-      img: "/images/stacks/ASTRO.svg",
-      height: 75,
-      width: 75,
-      left: 100,
-      top: 470,
+      name: "Astro",
+      logo: "/images/stacks/ASTRO.svg",
     },
     {
-      img: "/images/stacks/BOOTSTRAP.svg",
-      height: 100,
-      width: 100,
-      left: 700,
-      top: 150,
+      name: "Bootstrap",
+      logo: "/images/stacks/BOOTSTRAP.svg",
     },
     {
-      img: "/images/stacks/CHAKRA.svg",
-      height: 100,
-      width: 100,
-      left: 875,
-      top: 75,
+      name: "Chakra",
+      logo: "/images/stacks/CHAKRA.svg",
     },
     {
-      img: "/images/stacks/CSS.svg",
-      height: 120,
-      width: 120,
-      left: 150,
-      top: 20,
+      name: "CSS",
+      logo: "/images/stacks/CSS.svg",
     },
     {
-      img: "/images/stacks/FIGMA.svg",
-      height: 90,
-      width: 90,
-      left: 740,
-      top: 10,
+      name: "Figma",
+      logo: "/images/stacks/FIGMA.svg",
     },
     {
-      img: "/images/stacks/FLUTTER.svg",
-      height: 50,
-      width: 50,
-      left: 310,
-      top: 490,
+      name: "Flutter",
+      logo: "/images/stacks/FLUTTER.svg",
     },
     {
-      img: "/images/stacks/GITHUB.svg",
-      height: 80,
-      width: 80,
-      left: 525,
-      top: 340,
+      name: "GitHub",
+      logo: "/images/stacks/GITHUB.svg",
     },
     {
-      img: "/images/stacks/HTML.svg",
-      height: 90,
-      width: 90,
-      left: 10,
-      top: 60,
+      name: "HTML",
+      logo: "/images/stacks/HTML.svg",
     },
     {
-      img: "/images/stacks/INSOMNIA.svg",
-      height: 45,
-      width: 45,
-      left: 360,
-      top: 380,
+      name: "Insomnia",
+      logo: "/images/stacks/INSOMNIA.svg",
     },
     {
-      img: "/images/stacks/JAVASCRIPT.svg",
-      height: 112,
-      width: 112,
-      left: 525,
-      top: 25,
+      name: "JavaScript",
+      logo: "/images/stacks/JAVASCRIPT.svg",
     },
     {
-      img: "/images/stacks/MONGO_DB.svg",
-      height: 90,
-      width: 90,
-      left: 875,
-      top: 220,
+      name: "MongoDB",
+      logo: "/images/stacks/MONGO_DB.svg",
     },
     {
-      img: "/images/stacks/MYSQL.svg",
-      height: 70,
-      width: 70,
-      left: 900,
-      top: 353,
+      name: "MySQL",
+      logo: "/images/stacks/MYSQL.svg",
     },
     {
-      img: "/images/stacks/NESTJS.svg",
-      height: 85,
-      width: 85,
-      left: 630,
-      top: 445,
+      name: "NestJS",
+      logo: "/images/stacks/NESTJS.svg",
     },
     {
-      img: "/images/stacks/NEXTJS.svg",
-      height: 145,
-      width: 145,
-      left: 0,
-      top: 180,
+      name: "Next.js",
+      logo: "/images/stacks/NEXTJS.svg",
     },
     {
-      img: "/images/stacks/POSTGRES.svg",
-      height: 65,
-      width: 65,
-      left: 830,
-      top: 470,
+      name: "Postgres",
+      logo: "/images/stacks/POSTGRES.svg",
     },
     {
-      img: "/images/stacks/POSTMAN.svg",
-      height: 95,
-      width: 95,
-      left: 210,
-      top: 380,
+      name: "Postman",
+      logo: "/images/stacks/POSTMAN.svg",
     },
     {
-      img: "/images/stacks/REACT.svg",
-      height: 120,
-      width: 120,
-      left: 310,
-      top: 80,
+      name: "React",
+      logo: "/images/stacks/REACT.svg",
     },
     {
-      img: "/images/stacks/TYPESCRIPT.svg",
-      height: 90,
-      width: 90,
-      left: 450,
-      top: 200,
+      name: "TypeScript",
+      logo: "/images/stacks/TYPESCRIPT.svg",
     },
     {
-      img: "/images/stacks/VERCEL.svg",
-      height: 75,
-      width: 75,
-      left: 430,
-      top: 430,
+      name: "Vercel",
+      logo: "/images/stacks/VERCEL.svg",
     },
     {
-      img: "/images/stacks/VSCODE.svg",
-      height: 150,
-      width: 150,
-      left: 200,
-      top: 200,
+      name: "VS Code",
+      logo: "/images/stacks/VSCODE.svg",
     },
     {
-      img: "/images/stacks/WORDPRESS.svg",
-      height: 45,
-      width: 45,
-      left: 820,
-      top: 360,
+      name: "WordPress",
+      logo: "/images/stacks/WORDPRESS.svg",
+    },
+    {
+      name: "Tailwind",
+      logo: "/images/stacks/TAILWIND.svg",
+    },
+    {
+      name: "NodeJS",
+      logo: "/images/stacks/NODEJS.svg",
+    },
+    {
+      name: "Express",
+      logo: "/images/stacks/EXPRESS.svg",
+    },
+    {
+      name: "NPM",
+      logo: "/images/stacks/NPM.svg",
+    },
+    {
+      name: "Git",
+      logo: "/images/stacks/GIT.svg",
+    },
+
+    {
+      name: "Docker",
+      logo: "/images/stacks/DOCKER.svg",
+    },
+    {
+      name: "ESlint",
+      logo: "/images/stacks/ESLINT.svg",
+    },
+    {
+      name: "Redux",
+      logo: "/images/stacks/REDUX.svg",
+    },
+    {
+      name: "React Native",
+      logo: "/images/stacks/REACTNATIVE.svg",
+    },
+    {
+      name: "Expo",
+      logo: "/images/stacks/EXPO.svg",
     },
   ];
+
+  const Badge = ({ name, logo }: any) => (
+    <div
+      className="flex items-center space-x-2 bg-[#403f3f3b] text-white backdrop-blur-[17px] border border-[rgba(255,255,255,0.125)] shadow-md rounded-lg
+  px-2 py-1 sm:px-3 sm:py-2
+  hover:scale-110 transition-transform cursor-pointer"
+    >
+      <img
+        src={logo}
+        alt={name}
+        className="object-contain w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8"
+      />
+
+      <span className="font-medium text-xs sm:text-sm md:text-base text-white">
+        {name}
+      </span>
+    </div>
+  );
   return (
     <>
       <div className="hidden md:block">
@@ -198,38 +188,12 @@ const Skills = () => {
             className="absolute  top-[-200px] left-[40%] transform -translate-x-[200px] -rotate-90 h-[380px] w-[400px]"
           />
           <div className="absolute right-[100px] rotate-180 top-24">
-            <Arrow height="100px" width="340px" color="#D117B8" />
+            <Arrow height="100px" width="340px" color="#6717d1" />
           </div>
 
-          <div
-            className={`flex  justify-center relative antialiased mt-24 w-[900px] mx-auto h-[600px] `}
-            onMouseEnter={() => {
-              setIsHovered(true);
-            }}
-            onMouseLeave={() => {
-              setIsHovered(false);
-            }}
-          >
-            {stacksDetails.map((item, i) => (
-              <Image
-                key={i}
-                alt="stacks"
-                className={`ease-in duration-100 ${
-                  isHovered
-                    ? "even:translate-x-[10px] odd:translate-x-[-10px]"
-                    : "even:translate-x-0 odd:translate-x-0"
-                }`}
-                src={item.img}
-                width={item.width}
-                height={item.width}
-                style={{
-                  width: `${item.width}px`,
-                  height: `${item.height}px `,
-                  position: "absolute",
-                  top: `${item.top}px`,
-                  left: `${item.left}px`,
-                }}
-              />
+          <div className="flex  w-[90%] mx-auto gap-8 items-center justify-center mt-28 flex-wrap">
+            {stacksDetails.map((stack, idx) => (
+              <Badge key={idx} {...stack} />
             ))}
           </div>
         </div>
@@ -239,9 +203,14 @@ const Skills = () => {
           My skills
         </h1>
         <div className="absolute right-[20px] rotate-180 top-0">
-          <Arrow height="40px" width="80px" color="#D117B8" />
+          <Arrow height="40px" width="80px" color="#6717d1" />
         </div>
-        <img src="/images/skills.png" alt="" className="w-full mt-10" />
+        <div className="flex  w-full mx-auto gap-2 items-center justify-center  md:mt-28  mt-10  flex-wrap">
+          {stacksDetails.map((stack, idx) => (
+            <Badge key={idx} {...stack} />
+          ))}
+        </div>
+        {/* <img src="/images/skills.png" alt="" className="w-full mt-10" /> */}
       </div>
     </>
   );

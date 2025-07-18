@@ -156,7 +156,7 @@ export default function Home() {
                 }}
               />
             </div>
-            <div className="mt-10 pl-[58px]">
+            <div className="mt-10 pl-[38px]">
               {navItems.map((item, i) => (
                 <div
                   key={i}

@@ -64,7 +64,7 @@ const HeroSection = () => {
   return (
     <>
       <div className="hidden md:block">
-        <div className="px-20 pt-[100px] overflow-y-hidden" id="home">
+        <div className="px-20 pt-[150px] overflow-y-hidden" id="home">
           <div className="flex w-full">
             <div className="w-1/2 ">
               <ReactTyped

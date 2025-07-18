@@ -66,7 +66,7 @@ export default function Certifications() {
             sessionStorage.setItem("visited", "true");
           }}
         >
-          <Arrow height="80px" width="180px" color="#D117B8" />
+          <Arrow height="80px" width="180px" color="#6717d1" />
         </div>
 
         <h1
@@ -79,7 +79,12 @@ export default function Certifications() {
         <div className="grid grid-cols-3 gap-[40px] py-0 mt-20">
           {projects.map((item, i) => (
             <CardContainer className="inter-var py-0" key={i}>
-              <CardBody className="bg-black-50 relative group/card   dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border  ">
+              <CardBody
+                className="bg-[rgba(98,98,98,0.23)]
+  text-[#CCD6F6]
+  backdrop-blur-[17px] border border-[rgba(255,255,255,0.125)]
+  backdrop-saturate-200 relative group/card   w-full h-auto rounded-xl p-6   "
+              >
                 <CardItem translateZ="100" className="w-full ">
                   <Image
                     src={`${item.imageUrl}`}
@@ -98,7 +103,7 @@ export default function Certifications() {
                 <CardItem
                   as="p"
                   translateZ="60"
-                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                  className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 line-clamp-3"
                 >
                   {item.detail}
                 </CardItem>
@@ -127,14 +132,14 @@ export default function Certifications() {
             push("/");
           }}
         >
-          <Arrow height="48px" width="48px" color="#D117B8" />
+          <Arrow height="48px" width="48px" color="#6717d1" />
         </div>
         <h1 className={`text-[40px] font-semibold text-[#fff] text-right`}>
           Certificates
         </h1>
         {projects.map((item, i) => (
           <CardContainer className="inter-var py-0 mt-5" key={i}>
-            <CardBody className="bg-black-50 relative group/card   dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-4 border  ">
+            <CardBody className=" bg-[rgba(98,98,98,0.23)] text-[#CCD6F6] backdrop-blur-[17px] border border-[rgba(255,255,255,0.125)] backdrop-saturate-200 relative group/card w-full h-auto rounded-xl p-4">
               <CardItem translateZ="100" className="w-full ">
                 <Image
                   src={`${item.imageUrl}`}
@@ -153,7 +158,7 @@ export default function Certifications() {
               <CardItem
                 as="p"
                 translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 line-clamp-3"
               >
                 {item.detail}
               </CardItem>
