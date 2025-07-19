@@ -24,7 +24,7 @@ const AboutUs = () => {
           />
           <div className="flex w-[1000px] m-auto">
             <div className="w-[500px] relative">
-              <h1 className=" absolute  text-[80px] font-semibold text-[#fff] right-[-120px] top-[-75px] space-x-3 pl-5   leading-[80px]  ">
+              <h1 className=" absolute  text-[80px] font-semibold text-[#fff] right-[-100px] top-[-75px] space-x-3 pl-5   leading-[80px]  ">
                 About <br />
                 me
               </h1>
@@ -37,21 +37,20 @@ const AboutUs = () => {
                 width={400}
               />
             </div>
-            <div className="w-[500px] pt-[100px] ml-10 relative ">
+            <div className="w-[500px] pt-[100px] ml-8 relative ">
               <div className="absolute top-0 right-[-100px]">
                 <Arrow height="100px" width="340px" color="#6717d1" />
               </div>
-              <div>
-                Hello and welcome to my corner of the internet! I am a
-                passionate UX designer and a skilled full stack developer, with
-                a knack for creating intuitive and user-friendly digital
-                experiences. With a blend of creativity and technical expertise,
-                I strive to bridge the gap between design and development to
-                deliver products that not only look amazing but also function
-                flawlessly.
+              <div className="text-[20px]">
+                Hello and welcome to my corner of the internet! I’m a passionate
+                UX designer and skilled full stack developer, dedicated to
+                creating intuitive, user-friendly digital experiences. By
+                blending creativity with technical expertise, I bridge the gap
+                between design and development to deliver products that are both
+                visually stunning and highly functional.
               </div>
               <a href="/cv.pdf" download>
-                <button className=" transition duration-100 ease-in-out bg-[#6717d1] rounded-full py-2 px-6 text-[18px] w-auto mt-10 hover:translate-x-[10px] ease-out duration-100">
+                <button className=" transition duration-100 ease-in-out bg-[#6717d1] rounded-full py-3 px-6 text-[18px] w-auto  hover:translate-x-[10px] ease-out duration-100 mt-16">
                   Download CV
                 </button>
               </a>

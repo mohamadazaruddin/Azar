@@ -139,7 +139,7 @@ const Projects = ({ isAll }: { isAll?: boolean }) => {
               <button
                 type="button"
                 onClick={() => push("/projects")}
-                className="bg-[#6717d1] rounded-full py-1 px-6 text-[16px] w-auto mt-10 hover:translate-x-[10px] ease-out duration-100 flex items-center gap-4 mx-auto "
+                className="bg-[#6717d1] rounded-full py-3 px-6 text-[18px] w-auto mt-10 hover:translate-x-[10px] ease-out duration-100 flex items-center gap-4 mx-auto "
               >
                 View All
                 <Arrow height="30px" width="24px" color="#fff" />
@@ -152,6 +152,7 @@ const Projects = ({ isAll }: { isAll?: boolean }) => {
         <h1 className={`text-[40px] font-semibold text-[#fff] text-right`}>
           My projects
         </h1>
+
         {projects.map((item, i) => (
           <CardContainer className="inter-var py-0 mt-5" key={i}>
             <CardBody className="bg-[rgba(98,98,98,0.23)] text-[#ffffff]  backdrop-blur-[17px] border border-[rgba(255,255,255,0.125)]  relative group/card   w-full h-auto rounded-xl p-4 border  ">

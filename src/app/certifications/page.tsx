@@ -56,47 +56,108 @@ export default function Certifications() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="relative bg-[url('/images/bg.svg')] py-10 "
+      className="relative bg-[url('/ct.png')] "
     >
-      <div className="hidden md:block px-[80px]">
-        <div
-          className="absolute left-[100px] top-[50px] rotate-180 cursor-pointer"
-          onClick={() => {
-            push("/");
-            sessionStorage.setItem("visited", "true");
-          }}
-        >
-          <Arrow height="80px" width="180px" color="#6717d1" />
-        </div>
+      <div
+        style={{
+          background: "#00000075",
+        }}
+        className="py-10"
+      >
+        <div className="hidden md:block px-[80px]">
+          <div
+            className="absolute left-[100px] top-[50px] rotate-180 cursor-pointer"
+            onClick={() => {
+              push("/");
+              sessionStorage.setItem("visited", "true");
+            }}
+          >
+            <Arrow height="80px" width="180px" color="#6717d1" />
+          </div>
 
-        <h1
-          className={`text-[80px] font-semibold text-[#fff] text-right space-x-3 mr-20 leading-[80px]`}
-        >
-          Certificates
-        </h1>
-        {/* <Projects isAll={true} /> */}
+          <h1
+            className={`text-[80px] font-semibold text-[#fff] text-right space-x-3 mr-20 leading-[80px]`}
+          >
+            Certificates
+          </h1>
+          {/* <Projects isAll={true} /> */}
 
-        <div className="grid grid-cols-3 gap-[40px] py-0 mt-20">
-          {projects.map((item, i) => (
-            <CardContainer className="inter-var py-0" key={i}>
-              <CardBody
-                className="bg-[rgba(98,98,98,0.23)]
+          <div className="grid grid-cols-3 gap-[40px] py-0 mt-20">
+            {projects.map((item, i) => (
+              <CardContainer className="inter-var py-0" key={i}>
+                <CardBody
+                  className="bg-[rgba(98,98,98,0.23)]
   text-[#CCD6F6]
   backdrop-blur-[17px] border border-[rgba(255,255,255,0.125)]
   backdrop-saturate-200 relative group/card   w-full h-auto rounded-xl p-6   "
-              >
+                >
+                  <CardItem translateZ="100" className="w-full ">
+                    <Image
+                      src={`${item.imageUrl}`}
+                      height="500"
+                      width="500"
+                      className="h-[250px] w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                      alt="thumbnail"
+                    />
+                  </CardItem>
+                  <CardItem
+                    translateZ="50"
+                    className="text-xl font-bold text-neutral-600 dark:text-white mt-5"
+                  >
+                    {item.title}
+                  </CardItem>
+                  <CardItem
+                    as="p"
+                    translateZ="60"
+                    className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 line-clamp-3"
+                  >
+                    {item.detail}
+                  </CardItem>
+
+                  {/* <div className="flex justify-between items-center mt-5">
+                  <CardItem
+                    translateZ={20}
+                    as={Link}
+                    href={`${item.href}`}
+                    target="__blank"
+                    className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
+                  >
+                    Visit now →
+                  </CardItem>
+                </div> */}
+                </CardBody>
+              </CardContainer>
+            ))}
+          </div>
+        </div>
+        <div className="block md:hidden px-5 mt-10 relative">
+          <div
+            className="absolute left-[20px] top-[9px] rotate-180 cursor-pointer"
+            onClick={() => {
+              sessionStorage.setItem("visited", "true");
+              push("/");
+            }}
+          >
+            <Arrow height="48px" width="48px" color="#6717d1" />
+          </div>
+          <h1 className={`text-[40px] font-semibold text-[#fff] text-right`}>
+            Certificates
+          </h1>
+          {projects.map((item, i) => (
+            <CardContainer className="inter-var py-0 mt-5" key={i}>
+              <CardBody className=" bg-[rgba(98,98,98,0.23)] text-[#CCD6F6] backdrop-blur-[17px] border border-[rgba(255,255,255,0.125)] backdrop-saturate-200 relative group/card w-full h-auto rounded-xl p-4">
                 <CardItem translateZ="100" className="w-full ">
                   <Image
                     src={`${item.imageUrl}`}
-                    height="500"
-                    width="500"
-                    className="h-[250px] w-full object-cover rounded-xl group-hover/card:shadow-xl"
+                    height="150"
+                    width="25"
+                    className="h-[150px] w-full object-cover rounded-xl group-hover/card:shadow-xl"
                     alt="thumbnail"
                   />
                 </CardItem>
                 <CardItem
                   translateZ="50"
-                  className="text-xl font-bold text-neutral-600 dark:text-white mt-5"
+                  className="text-md font-bold text-neutral-600 dark:text-white mt-5"
                 >
                   {item.title}
                 </CardItem>
@@ -109,61 +170,6 @@ export default function Certifications() {
                 </CardItem>
 
                 {/* <div className="flex justify-between items-center mt-5">
-                  <CardItem
-                    translateZ={20}
-                    as={Link}
-                    href={`${item.href}`}
-                    target="__blank"
-                    className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
-                  >
-                    Visit now →
-                  </CardItem>
-                </div> */}
-              </CardBody>
-            </CardContainer>
-          ))}
-        </div>
-      </div>
-      <div className="block md:hidden px-5 mt-10 relative">
-        <div
-          className="absolute left-[20px] top-[9px] rotate-180 cursor-pointer"
-          onClick={() => {
-            sessionStorage.setItem("visited", "true");
-            push("/");
-          }}
-        >
-          <Arrow height="48px" width="48px" color="#6717d1" />
-        </div>
-        <h1 className={`text-[40px] font-semibold text-[#fff] text-right`}>
-          Certificates
-        </h1>
-        {projects.map((item, i) => (
-          <CardContainer className="inter-var py-0 mt-5" key={i}>
-            <CardBody className=" bg-[rgba(98,98,98,0.23)] text-[#CCD6F6] backdrop-blur-[17px] border border-[rgba(255,255,255,0.125)] backdrop-saturate-200 relative group/card w-full h-auto rounded-xl p-4">
-              <CardItem translateZ="100" className="w-full ">
-                <Image
-                  src={`${item.imageUrl}`}
-                  height="150"
-                  width="25"
-                  className="h-[150px] w-full object-cover rounded-xl group-hover/card:shadow-xl"
-                  alt="thumbnail"
-                />
-              </CardItem>
-              <CardItem
-                translateZ="50"
-                className="text-md font-bold text-neutral-600 dark:text-white mt-5"
-              >
-                {item.title}
-              </CardItem>
-              <CardItem
-                as="p"
-                translateZ="60"
-                className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300 line-clamp-3"
-              >
-                {item.detail}
-              </CardItem>
-
-              {/* <div className="flex justify-between items-center mt-5">
                 <CardItem
                   translateZ={20}
                   as={Link}
@@ -174,9 +180,10 @@ export default function Certifications() {
                   Visit now
                 </CardItem>
               </div> */}
-            </CardBody>
-          </CardContainer>
-        ))}
+              </CardBody>
+            </CardContainer>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -145,7 +145,7 @@ const Skills = () => {
     <div
       className="flex items-center space-x-2 bg-[#403f3f3b] text-white backdrop-blur-[17px] border border-[rgba(255,255,255,0.125)] shadow-md rounded-lg
   px-2 py-1 sm:px-3 sm:py-2
-  hover:scale-110 transition-transform cursor-pointer"
+  hover:scale-110 transition-transform "
     >
       <img
         src={logo}
@@ -176,10 +176,19 @@ const Skills = () => {
             width={450}
             height={380}
           />
-          <h1 className="  text-[80px] font-semibold text-[#fff]  space-x-3 pl-20   leading-[80px]  ">
-            My Skills
-          </h1>
 
+          <div className="pl-20">
+            <h1 className="text-[80px] font-semibold">
+              <span className="text-white">My Work</span>
+              {/* <p className="text-[18px] font-bold text-grey-500">
+                {" "}
+                Recipes that I use
+              </p> */}
+              {/* <span className="bg-gradient-to-r from-purple-800 via-pink-500 via-red-500  to-yellow-400 bg-clip-text text-transparent cool-font">
+              Work
+            </span> */}
+            </h1>
+          </div>
           <Image
             src="/images/pinkDots.svg"
             alt=""
@@ -190,7 +199,6 @@ const Skills = () => {
           <div className="absolute right-[100px] rotate-180 top-24">
             <Arrow height="100px" width="340px" color="#6717d1" />
           </div>
-
           <div className="flex  w-[90%] mx-auto gap-8 items-center justify-center mt-28 flex-wrap">
             {stacksDetails.map((stack, idx) => (
               <Badge key={idx} {...stack} />

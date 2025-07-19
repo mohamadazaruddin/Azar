@@ -1,5 +1,5 @@
 "use client";
-import { SetStateAction, useEffect, useState } from "react";
+import { SetStateAction, useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import ky from "ky";
 const ContactForm = dynamic(() => import("@/app/components/Contact"));
@@ -12,10 +12,14 @@ const Projects = dynamic(() => import("@/app/components/Projects"));
 const Skills = dynamic(() => import("@/app/components/Skills"));
 const WelcomeBanner = dynamic(() => import("./components/WelcomeBanner"));
 const AboutUs = dynamic(() => import("@/app/components/AboutUs"));
+
 export default function Home() {
   const [viewSection, setviewSection] = useState("Home");
+  const [isAtTop, setIsAtTop] = useState(false);
+
   const [navOpen, setNavOpen] = useState(false);
   const [welcomeBanner, setWelcomeBanner] = useState(true);
+  const homeref = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const fetchFoodoData = async () => {
       const foodo = await fetch("https://foodo-be.onrender.com");
@@ -109,6 +113,17 @@ export default function Home() {
       handleSubmit(userInfo);
     }
   }, []);
+  const scrollTriggred = () => {
+    if (homeref.current) {
+      const rect = homeref.current.getBoundingClientRect();
+      // Check if the top of the section is at or above the top of the viewport
+      if (rect.top <= 10) {
+        setIsAtTop(true);
+      } else {
+        setIsAtTop(false);
+      }
+    }
+  };
   return (
     <main
       style={{
@@ -119,60 +134,68 @@ export default function Home() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="bg-[url('/images/mobBG.svg')] md:bg-[url('/images/bg.svg')]  py-10 relative"
+      onScroll={scrollTriggred}
+      className="bg-[url('/ct.png')] md:bg-[url('/ct.png')]   relative"
     >
-      <WelcomeBanner welcomeBanner={welcomeBanner} />
-
       <div
-        className={`${
-          welcomeBanner ? "hidden w-0 overflow-hidden" : ""
-        } ease-linear duration-100`}
+        style={{
+          background: "#00000080",
+        }}
+        className="py-10"
       >
+        <WelcomeBanner welcomeBanner={welcomeBanner} />
+
         <div
-          style={{
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            backgroundSize: "cover",
-          }}
           className={`${
-            navOpen
-              ? "w-full h-full  rounded-none duration-100"
-              : "h-0 w-0 rounded-bl-full duration-100"
-          }  absolute  ease-linear top-[0px] right-0 z-50 bg-[url('/images/navBg.png')]`}
+            welcomeBanner ? "hidden w-0 overflow-hidden" : ""
+          } ease-linear duration-100`}
         >
           <div
+            style={{
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
             className={`${
-              navOpen ? "block delay-800" : "hidden w-0 h-0 "
-            } duration-300 ease-linear delay-0`}
+              navOpen
+                ? "w-full h-full  rounded-none duration-100"
+                : "h-0 w-0 rounded-bl-full duration-100"
+            }  absolute  ease-linear top-[0px] right-0 z-50 bg-[url('/images/navBg.png')]`}
           >
-            <div className="flex justify-between w-full px-5 mt-10">
-              <img src="/images/logo.svg" alt="" height="40" width="40" />
-              <CrossSolid
-                height="18px"
-                width="18px"
-                color="#fff"
-                onClick={() => {
-                  setNavOpen(false);
-                }}
-              />
-            </div>
-            <div className="mt-10 pl-[38px]">
-              {navItems.map((item, i) => (
-                <div
-                  key={i}
-                  className={`${
-                    item.title.toLowerCase() === viewSection.toLowerCase()
-                      ? "text-[60px] text-[#BB64FF] font-semibold"
-                      : "text-[40px] text-[#fff] font-medium"
-                  } mt-2`}
+            <div
+              className={`${
+                navOpen ? "block delay-800" : "hidden w-0 h-0 "
+              } duration-300 ease-linear delay-0`}
+            >
+              <div className="flex justify-between w-full px-5 mt-10">
+                <img src="/images/logo.svg" alt="" height="40" width="40" />
+                <CrossSolid
+                  height="18px"
+                  width="18px"
+                  color="#fff"
                   onClick={() => {
-                    setNavOpen(!navOpen);
-                    setviewSection(item.title);
+                    setNavOpen(false);
                   }}
-                >
-                  <a href={`${item.action}`}> {item.title}</a>
-                </div>
-              ))}
+                />
+              </div>
+              <div className="mt-10 pl-[38px]">
+                {navItems.map((item, i) => (
+                  <div
+                    key={i}
+                    className={`${
+                      item.title.toLowerCase() === viewSection.toLowerCase()
+                        ? "text-[60px] text-[#BB64FF] font-semibold"
+                        : "text-[40px] text-[#fff] font-medium"
+                    } mt-2`}
+                    onClick={() => {
+                      setNavOpen(!navOpen);
+                      setviewSection(item.title);
+                    }}
+                  >
+                    <a href={`${item.action}`}> {item.title}</a>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -185,11 +208,15 @@ export default function Home() {
             setNavOpen={(view: SetStateAction<boolean>) => setNavOpen(view)}
             viewSection={viewSection}
             navOpen={navOpen}
+            shrinkNav={isAtTop}
           />
           {/* <FollowerPointerCard title={<>Guest</>}> */}
-          <HeroSection />
+          <div ref={homeref}>
+            <HeroSection />
+          </div>
           {/* </FollowerPointerCard> */}
           <AboutUs />
+
           <Skills />
           <Projects />
           <ContactForm />
