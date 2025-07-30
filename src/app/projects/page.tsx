@@ -58,6 +58,14 @@ export default function Project() {
         "Defino is a dictionary app built with React Native for Android and iOS devices. It allows users to search for word meanings, synonyms, and definitions on the go. Defino offers a fast, intuitive, and mobile-friendly vocabulary experience",
     },
     {
+      title: "Concentro",
+      imageUrl: "/images/projects/concentro.png",
+      href: "https://concentro-zeta.vercel.app",
+      stacks: ["Next JS", "Typescript", "Chakra UI"],
+      detail:
+        "Concentro is a brain-training game built with Next.js for the web. It challenges users to quickly identify and pronounce color names and their displayed colors, sharpening focus and cognitive flexibility right in your browser. Concentro offers a fast, intuitive, and web-friendly way to boost your attention and mental agility.",
+    },
+    {
       title: "UNIKA",
       imageUrl: "/images/projects/unika.svg",
       href: "https://mohamadazaruddin.github.io/UNIKA-WEBSITE",
@@ -143,7 +151,7 @@ export default function Project() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="relative bg-[url('/ct.png')] "
+      className="relative bg-[url('/ct.pn g')] "
     >
       <div
         style={{

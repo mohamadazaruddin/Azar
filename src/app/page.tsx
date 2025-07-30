@@ -135,7 +135,7 @@ export default function Home() {
         backgroundSize: "cover",
       }}
       onScroll={scrollTriggred}
-      className="bg-[url('/ct.png')] md:bg-[url('/ct.png')]   relative"
+      className=" relative"
     >
       <div
         style={{

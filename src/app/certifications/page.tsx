@@ -56,7 +56,7 @@ export default function Certifications() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="relative bg-[url('/ct.png')] "
+      className="relative  "
     >
       <div
         style={{
