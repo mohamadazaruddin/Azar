@@ -153,7 +153,7 @@ const Skills = () => {
         className="object-contain w-4 h-4 sm:w-7 sm:h-7 md:w-8 md:h-8"
       />
 
-      <span className="font-medium text-xs sm:text-sm md:text-base text-white">
+      <span className="font-medium text-sm sm:text-sm md:text-base text-white">
         {name}
       </span>
     </div>
