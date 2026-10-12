@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: " Check out My Portfolio",
+  title: "AZR",
   description: "Created By Azar",
   icons: "/favicon-16x16.png",
 };
@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>Azar</title>
+        {/* <title>Azar</title> */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link
           rel="apple-touch-icon"
